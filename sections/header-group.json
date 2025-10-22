@@ -20,10 +20,18 @@
             "text": "FALL SALE: -50% OFF",
             "url": ""
           }
+        },
+        "message_YmcQJq": {
+          "type": "message",
+          "settings": {
+            "text": "FREE DELIVERY",
+            "url": ""
+          }
         }
       },
       "block_order": [
-        "message"
+        "message",
+        "message_YmcQJq"
       ],
       "settings": {
         "enable_sticky": false,
