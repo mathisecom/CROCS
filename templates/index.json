@@ -81,13 +81,14 @@
           "settings": {
             "icon": "none",
             "icon_width": 20,
-            "title": "Title",
+            "title": "Delivery Information",
             "content": "<p>Share some content to your customers about your products.</p>",
             "page": ""
           }
         },
         "collapsible_text_nwCzRP": {
           "type": "collapsible_text",
+          "disabled": true,
           "settings": {
             "icon": "none",
             "icon_width": 20,
