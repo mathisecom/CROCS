@@ -18,6 +18,12 @@
             "heading_tag": "h2"
           }
         },
+        "liquid_npihyB": {
+          "type": "liquid",
+          "settings": {
+            "liquid": ""
+          }
+        },
         "badges_76Vcni": {
           "type": "badges",
           "settings": {}
@@ -86,6 +92,7 @@
       },
       "block_order": [
         "title_bHEbCE",
+        "liquid_npihyB",
         "badges_76Vcni",
         "price_Cn9dKJ",
         "description_yAqMnX",
