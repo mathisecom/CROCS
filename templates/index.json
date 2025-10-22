@@ -53,6 +53,13 @@
     "rich_text_HyAjkR": {
       "type": "rich-text",
       "blocks": {
+        "subheading_XQeB6Y": {
+          "type": "subheading",
+          "disabled": true,
+          "settings": {
+            "text": "★★★★★ Rated 4.8/5"
+          }
+        },
         "subheading_AartzF": {
           "type": "subheading",
           "settings": {
@@ -61,6 +68,7 @@
         }
       },
       "block_order": [
+        "subheading_XQeB6Y",
         "subheading_AartzF"
       ],
       "name": "Rich text",
