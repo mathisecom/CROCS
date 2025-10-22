@@ -423,6 +423,12 @@
     "rich_text_bg8Xxn": {
       "type": "rich-text",
       "blocks": {
+        "subheading_Wkexec": {
+          "type": "subheading",
+          "settings": {
+            "text": "★★★★★ Rated 4.8/5"
+          }
+        },
         "heading_LNtUPP": {
           "type": "heading",
           "settings": {
@@ -434,6 +440,7 @@
         }
       },
       "block_order": [
+        "subheading_Wkexec",
         "heading_LNtUPP"
       ],
       "name": "Rich text",
