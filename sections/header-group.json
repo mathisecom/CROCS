@@ -27,11 +27,19 @@
             "text": "FREE DELIVERY",
             "url": ""
           }
+        },
+        "message_ztdhGN": {
+          "type": "message",
+          "settings": {
+            "text": "100% SECURE PAYMENT",
+            "url": ""
+          }
         }
       },
       "block_order": [
         "message",
-        "message_YmcQJq"
+        "message_YmcQJq",
+        "message_ztdhGN"
       ],
       "settings": {
         "enable_sticky": false,
