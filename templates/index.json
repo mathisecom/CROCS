@@ -69,6 +69,7 @@
         "item_kKX9gE": {
           "type": "item",
           "settings": {
+            "image": "shopify://shop_images/BANNER_MOBILE_11.jpg",
             "stretch_image": true,
             "link_text": "",
             "link_url": "",
@@ -81,6 +82,7 @@
         "item_7cJ8tr": {
           "type": "item",
           "settings": {
+            "image": "shopify://shop_images/BANNER_MOBILE_12.jpg",
             "stretch_image": true,
             "link_text": "",
             "link_url": "",
