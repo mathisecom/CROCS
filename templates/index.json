@@ -231,6 +231,7 @@
         },
         "variant_picker_NT48nN": {
           "type": "variant_picker",
+          "disabled": true,
           "settings": {
             "hide_sold_out_variants": false,
             "stack_blocks": true,
@@ -242,6 +243,7 @@
         },
         "quantity_selector_rRJW6r": {
           "type": "quantity_selector",
+          "disabled": true,
           "settings": {}
         },
         "buy_buttons_RrYfBB": {
