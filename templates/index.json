@@ -184,6 +184,22 @@
         "heading_gradient": ""
       }
     },
+    "scrolling_text_XMCyVT": {
+      "type": "scrolling-text",
+      "name": "Scrolling text",
+      "settings": {
+        "full_width": true,
+        "text": "ONLINE EXCLUSIVE",
+        "text_size": "xsmall",
+        "text_style": "fill",
+        "scrolling_mode": "auto",
+        "scrolling_speed": 10,
+        "background": "",
+        "background_gradient": "",
+        "text_color": "#a53241",
+        "text_gradient": ""
+      }
+    },
     "featured_product_zxfQHH": {
       "type": "featured-product",
       "blocks": {
@@ -415,22 +431,6 @@
         "spacing": "none"
       }
     },
-    "scrolling_text_XMCyVT": {
-      "type": "scrolling-text",
-      "name": "Scrolling text",
-      "settings": {
-        "full_width": true,
-        "text": "ONLINE EXCLUSIVE",
-        "text_size": "xsmall",
-        "text_style": "fill",
-        "scrolling_mode": "auto",
-        "scrolling_speed": 10,
-        "background": "",
-        "background_gradient": "",
-        "text_color": "#a53241",
-        "text_gradient": ""
-      }
-    },
     "rich_text_bg8Xxn": {
       "type": "rich-text",
       "blocks": {
@@ -582,10 +582,10 @@
     "slideshow_GypkUB",
     "rich_text_HyAjkR",
     "image_link_blocks_BEw99L",
+    "scrolling_text_XMCyVT",
     "featured_product_zxfQHH",
     "press_bXRLLB",
     "media_with_text_Xg7Rwg",
-    "scrolling_text_XMCyVT",
     "rich_text_bg8Xxn",
     "testimonials_Daz4Qb",
     "faq_4xyy7N"
