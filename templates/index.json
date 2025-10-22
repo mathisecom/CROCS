@@ -9,6 +9,80 @@
  */
 {
   "sections": {
+    "image_link_blocks_BEw99L": {
+      "type": "image-link-blocks",
+      "blocks": {
+        "item_bKriQU": {
+          "type": "item",
+          "settings": {
+            "stretch_image": true,
+            "link_text": "",
+            "link_url": "",
+            "background": "",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        },
+        "item_kKX9gE": {
+          "type": "item",
+          "settings": {
+            "stretch_image": true,
+            "link_text": "",
+            "link_url": "",
+            "background": "",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        },
+        "item_7cJ8tr": {
+          "type": "item",
+          "settings": {
+            "stretch_image": true,
+            "link_text": "",
+            "link_url": "",
+            "background": "",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        },
+        "item_kxFrED": {
+          "type": "item",
+          "settings": {
+            "stretch_image": true,
+            "link_text": "",
+            "link_url": "",
+            "background": "",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        }
+      },
+      "block_order": [
+        "item_bKriQU",
+        "item_kKX9gE",
+        "item_7cJ8tr",
+        "item_kxFrED"
+      ],
+      "name": "Image link blocks",
+      "settings": {
+        "full_width": false,
+        "block_size": "small",
+        "subheading": "",
+        "title": "",
+        "content": "",
+        "link_url": "",
+        "link_text": "",
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": ""
+      }
+    },
     "featured_product_zxfQHH": {
       "type": "featured-product",
       "blocks": {
@@ -168,6 +242,7 @@
     }
   },
   "order": [
+    "image_link_blocks_BEw99L",
     "featured_product_zxfQHH",
     "impact-text"
   ]
