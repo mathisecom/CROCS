@@ -385,6 +385,7 @@
         "image_mGcNtV": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/BANNER_MOBILE_12.jpg",
             "media_width": 50,
             "media_position": "start",
             "text_position": "place-self-center text-center",
@@ -393,13 +394,13 @@
             "subheading": "",
             "title": "Heading",
             "content": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>",
-            "link_text": "",
+            "link_text": "BUY NOW",
             "link_url": "",
             "background": "#ffffff",
             "background_gradient": "",
             "text_color": "#000000",
             "text_gradient": "",
-            "button_background": "",
+            "button_background": "#a53241",
             "button_text_color": ""
           }
         }
@@ -409,7 +410,7 @@
       ],
       "name": "Media with text",
       "settings": {
-        "full_width": true,
+        "full_width": false,
         "alternate_media_position": false,
         "spacing": "none"
       }
