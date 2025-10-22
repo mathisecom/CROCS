@@ -50,6 +50,29 @@
         "background_gradient": ""
       }
     },
+    "rich_text_HyAjkR": {
+      "type": "rich-text",
+      "blocks": {
+        "subheading_AartzF": {
+          "type": "subheading",
+          "settings": {
+            "text": "+3,000 SATISFIED CUSTOMERS"
+          }
+        }
+      },
+      "block_order": [
+        "subheading_AartzF"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "full_width": true,
+        "content_width": "small",
+        "text_position": "center",
+        "background": "",
+        "background_gradient": "",
+        "text_color": ""
+      }
+    },
     "image_link_blocks_BEw99L": {
       "type": "image-link-blocks",
       "blocks": {
@@ -539,6 +562,7 @@
   },
   "order": [
     "slideshow_GypkUB",
+    "rich_text_HyAjkR",
     "image_link_blocks_BEw99L",
     "featured_product_zxfQHH",
     "press_bXRLLB",
