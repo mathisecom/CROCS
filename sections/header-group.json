@@ -58,9 +58,9 @@
       "settings": {
         "enable_sticky": true,
         "hide_on_scroll": false,
-        "logo": "{{shop.brand.logo}}",
+        "logo": "shopify://shop_images/Logo_10.png",
         "logo_max_width": 120,
-        "logo_mobile_max_width": 100,
+        "logo_mobile_max_width": 120,
         "menu": "customer-account-main-menu",
         "sidebar_menu": "",
         "secondary_menu": "",
@@ -73,6 +73,7 @@
         "show_country_flag": true,
         "show_country_name": false,
         "transparent_header_text_color": "#ffffff",
+        "transparent_logo": "shopify://shop_images/Logo_10_1.png",
         "reduce_padding": true,
         "background_opacity": 100,
         "background_blur_radius": 0
