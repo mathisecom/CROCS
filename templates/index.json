@@ -464,6 +464,7 @@
         "logo_X6UNtH": {
           "type": "logo",
           "settings": {
+            "logo": "shopify://shop_images/Sous-titre_4.svg",
             "logo_width": 120,
             "link": ""
           }
@@ -509,7 +510,7 @@
         "text_color": "",
         "heading_color": "",
         "heading_gradient": "",
-        "logo_item_background": "",
+        "logo_item_background": "#ffffff",
         "logo_item_border": ""
       }
     },
