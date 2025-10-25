@@ -442,6 +442,77 @@
         "spacing": "none"
       }
     },
+    "scrolling_text_gBKLYp": {
+      "type": "scrolling-text",
+      "name": "Scrolling text",
+      "settings": {
+        "full_width": true,
+        "text": "ONLINE EXCLUSIVE",
+        "text_size": "xsmall",
+        "text_style": "fill",
+        "scrolling_mode": "auto",
+        "scrolling_speed": 10,
+        "background": "",
+        "background_gradient": "",
+        "text_color": "#a53241",
+        "text_gradient": ""
+      }
+    },
+    "logo_list_4piqA8": {
+      "type": "logo-list",
+      "blocks": {
+        "logo_X6UNtH": {
+          "type": "logo",
+          "settings": {
+            "logo_width": 120,
+            "link": ""
+          }
+        },
+        "logo_i3QUqR": {
+          "type": "logo",
+          "settings": {
+            "logo_width": 120,
+            "link": ""
+          }
+        },
+        "logo_bE4VL7": {
+          "type": "logo",
+          "settings": {
+            "logo_width": 120,
+            "link": ""
+          }
+        },
+        "logo_rqQGgk": {
+          "type": "logo",
+          "settings": {
+            "logo_width": 120,
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "logo_X6UNtH",
+        "logo_i3QUqR",
+        "logo_bE4VL7",
+        "logo_rqQGgk"
+      ],
+      "name": "Logo list",
+      "settings": {
+        "full_width": true,
+        "stack_mobile": true,
+        "title": "",
+        "content": "",
+        "text_alignment": "center",
+        "items_per_row": 5,
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": "",
+        "logo_item_background": "",
+        "logo_item_border": ""
+      }
+    },
     "rich_text_bg8Xxn": {
       "type": "rich-text",
       "blocks": {
@@ -621,6 +692,8 @@
     "featured_product_zxfQHH",
     "press_bXRLLB",
     "media_with_text_Xg7Rwg",
+    "scrolling_text_gBKLYp",
+    "logo_list_4piqA8",
     "rich_text_bg8Xxn",
     "testimonials_Daz4Qb",
     "faq_4xyy7N"
