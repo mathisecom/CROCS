@@ -187,6 +187,112 @@
         "heading_gradient": ""
       }
     },
+    "image_link_blocks_ieJitE": {
+      "type": "image-link-blocks",
+      "blocks": {
+        "item_Lj7FmR": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/BANNER_MOBILE_14.jpg",
+            "stretch_image": true,
+            "link_text": "",
+            "link_url": "",
+            "background": "",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        },
+        "item_qWiqKJ": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/BANNER_MOBILE_11.jpg",
+            "stretch_image": true,
+            "link_text": "",
+            "link_url": "",
+            "background": "",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        },
+        "item_YqTxhf": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/BANNER_MOBILE_13.jpg",
+            "stretch_image": true,
+            "link_text": "",
+            "link_url": "",
+            "background": "",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        },
+        "item_nYDQxc": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/BANNER_MOBILE_15.jpg",
+            "stretch_image": true,
+            "link_text": "",
+            "link_url": "",
+            "background": "",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        },
+        "item_MMha8p": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/BANNER_MOBILE_10.jpg",
+            "stretch_image": true,
+            "link_text": "",
+            "link_url": "",
+            "background": "",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        },
+        "item_JyHwqp": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/BANNER_MOBILE_16.jpg",
+            "stretch_image": true,
+            "link_text": "",
+            "link_url": "",
+            "background": "",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        }
+      },
+      "block_order": [
+        "item_Lj7FmR",
+        "item_qWiqKJ",
+        "item_YqTxhf",
+        "item_nYDQxc",
+        "item_MMha8p",
+        "item_JyHwqp"
+      ],
+      "name": "Image link blocks",
+      "settings": {
+        "full_width": false,
+        "block_size": "small",
+        "subheading": "",
+        "title": "",
+        "content": "",
+        "link_url": "",
+        "link_text": "",
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": ""
+      }
+    },
     "scrolling_text_XMCyVT": {
       "type": "scrolling-text",
       "name": "Scrolling text",
@@ -702,6 +808,7 @@
     "media_with_text_Xg7Rwg",
     "scrolling_text_gBKLYp",
     "rich_text_bg8Xxn",
+    "image_link_blocks_ieJitE",
     "testimonials_Daz4Qb",
     "faq_4xyy7N"
   ]
