@@ -488,6 +488,7 @@
         "logo_rqQGgk": {
           "type": "logo",
           "settings": {
+            "logo": "shopify://shop_images/Sous-titre_7.svg",
             "logo_width": 180,
             "link": ""
           }
@@ -692,11 +693,11 @@
     "rich_text_HyAjkR",
     "image_link_blocks_BEw99L",
     "scrolling_text_XMCyVT",
+    "logo_list_4piqA8",
     "featured_product_zxfQHH",
     "press_bXRLLB",
     "media_with_text_Xg7Rwg",
     "scrolling_text_gBKLYp",
-    "logo_list_4piqA8",
     "rich_text_bg8Xxn",
     "testimonials_Daz4Qb",
     "faq_4xyy7N"
