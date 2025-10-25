@@ -350,8 +350,8 @@
           "type": "quote",
           "settings": {
             "logo_width": 100,
-            "author": "",
-            "content": "Write some content about what they says about your store.",
+            "author": "Lucas M.",
+            "content": "These Spider-Man Crocs are awesome! Super comfy and the design looks exactly like the pictures.",
             "show_rating": true,
             "rating": 4
           }
@@ -360,8 +360,8 @@
           "type": "quote",
           "settings": {
             "logo_width": 100,
-            "author": "",
-            "content": "Write some content about what they says about your store.",
+            "author": "Emily R.",
+            "content": "My son is obsessed with Spider-Man, and now he refuses to wear anything else. Perfect gift!",
             "show_rating": true,
             "rating": 4
           }
@@ -370,8 +370,18 @@
           "type": "quote",
           "settings": {
             "logo_width": 100,
-            "author": "",
-            "content": "Write some content about what they says about your store.",
+            "author": "Daniel T.",
+            "content": "Very comfortable and lightweight. The Spider-Man print really stands out — great quality!",
+            "show_rating": true,
+            "rating": 4
+          }
+        },
+        "quote_afxXTK": {
+          "type": "quote",
+          "settings": {
+            "logo_width": 100,
+            "author": "Sophie L.",
+            "content": "Got them for my nephew and he loves them! They fit perfectly and look amazing in person.",
             "show_rating": true,
             "rating": 4
           }
@@ -380,7 +390,8 @@
       "block_order": [
         "quote_qFA8hq",
         "quote_3yijQW",
-        "quote_JRpHQe"
+        "quote_JRpHQe",
+        "quote_afxXTK"
       ],
       "name": "Press",
       "settings": {
