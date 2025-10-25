@@ -351,7 +351,7 @@
           "settings": {
             "logo_width": 100,
             "author": "Lucas M.",
-            "content": "These Spider-Man Crocs are awesome! Super comfy and the design looks exactly like the pictures.",
+            "content": "Absolutely love these! The Spider-Man details are incredible and they’re super comfy to wear all day.",
             "show_rating": true,
             "rating": 4
           }
@@ -484,9 +484,9 @@
             "round_avatar": true,
             "show_rating": true,
             "rating": 4,
-            "author": "John S.",
-            "title": "Testimonial 1",
-            "content": "<p>Share what your customers are saying about your products, customer service or shipping rates.</p>"
+            "author": "Chloe B.",
+            "title": "Super comfy to wear all day.",
+            "content": "<p><em>Absolutely love these! The Spider-Man details are incredible and they’re super comfy to wear all day.</em></p>"
           }
         },
         "testimonial_Kqkq6A": {
@@ -495,9 +495,9 @@
             "round_avatar": true,
             "show_rating": true,
             "rating": 5,
-            "author": "Mary U.",
+            "author": "Jake H.",
             "title": "Testimonial 2",
-            "content": "<p>Share what your customers are saying about your products, customer service or shipping rates.</p>"
+            "content": "<p>Great for both kids and adults who love Marvel! I get compliments every time I wear them.</p>"
           }
         },
         "testimonial_U9tjhL": {
@@ -506,16 +506,28 @@
             "round_avatar": true,
             "show_rating": true,
             "rating": 4,
-            "author": "Joshua A.",
+            "author": "Olivia K.",
             "title": "Testimonial 3",
-            "content": "<p>Share what your customers are saying about your products, customer service or shipping rates.</p>"
+            "content": "<p><em>My little brother was speechless when he saw them. They’re his new favorite shoes!</em></p>"
+          }
+        },
+        "testimonial_kGBTmU": {
+          "type": "testimonial",
+          "settings": {
+            "round_avatar": true,
+            "show_rating": true,
+            "rating": 4,
+            "author": "Nathan S.",
+            "title": "Perfect fit, cool design",
+            "content": "<p><em>Perfect fit, cool design, and really durable. Definitely worth it if you’re a Spider-Man fan!</em></p>"
           }
         }
       },
       "block_order": [
         "testimonial_BgagQh",
         "testimonial_Kqkq6A",
-        "testimonial_U9tjhL"
+        "testimonial_U9tjhL",
+        "testimonial_kGBTmU"
       ],
       "name": "Testimonials",
       "settings": {
