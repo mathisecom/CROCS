@@ -465,7 +465,7 @@
           "type": "logo",
           "settings": {
             "logo": "shopify://shop_images/Sous-titre_4.svg",
-            "logo_width": 120,
+            "logo_width": 180,
             "link": ""
           }
         },
@@ -473,7 +473,7 @@
           "type": "logo",
           "settings": {
             "logo": "shopify://shop_images/Sous-titre_5.svg",
-            "logo_width": 120,
+            "logo_width": 180,
             "link": ""
           }
         },
@@ -481,14 +481,14 @@
           "type": "logo",
           "settings": {
             "logo": "shopify://shop_images/Sous-titre_6.svg",
-            "logo_width": 120,
+            "logo_width": 180,
             "link": ""
           }
         },
         "logo_rqQGgk": {
           "type": "logo",
           "settings": {
-            "logo_width": 120,
+            "logo_width": 180,
             "link": ""
           }
         }
