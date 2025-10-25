@@ -96,7 +96,7 @@
           "type": "text",
           "settings": {
             "title": "Contact US",
-            "content": "<p>Use this text area to tell your customers about your brand and vision. You can change it in the theme editor.</p>",
+            "content": "<p>contact@crocweb.com<br/><br/><strong>Hours:</strong>Mon–Fri 9:00 AM–12:00 PM & 1:00 PM–6:00 PM / Sat & Sun 10:00 AM–12:00 PM</p>",
             "enable_follow_on_shop": true
           }
         }
