@@ -480,6 +480,7 @@
         "logo_bE4VL7": {
           "type": "logo",
           "settings": {
+            "logo": "shopify://shop_images/Sous-titre_6.svg",
             "logo_width": 120,
             "link": ""
           }
