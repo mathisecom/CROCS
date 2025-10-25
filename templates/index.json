@@ -472,6 +472,7 @@
         "logo_i3QUqR": {
           "type": "logo",
           "settings": {
+            "logo": "shopify://shop_images/Sous-titre_5.svg",
             "logo_width": 120,
             "link": ""
           }
