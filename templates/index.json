@@ -200,6 +200,65 @@
         "text_gradient": ""
       }
     },
+    "logo_list_4piqA8": {
+      "type": "logo-list",
+      "blocks": {
+        "logo_X6UNtH": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/Sous-titre_4.svg",
+            "logo_width": 180,
+            "link": ""
+          }
+        },
+        "logo_i3QUqR": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/Sous-titre_5.svg",
+            "logo_width": 180,
+            "link": ""
+          }
+        },
+        "logo_bE4VL7": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/Sous-titre_6.svg",
+            "logo_width": 180,
+            "link": ""
+          }
+        },
+        "logo_rqQGgk": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/Sous-titre_7.svg",
+            "logo_width": 180,
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "logo_X6UNtH",
+        "logo_i3QUqR",
+        "logo_bE4VL7",
+        "logo_rqQGgk"
+      ],
+      "name": "Logo list",
+      "settings": {
+        "full_width": true,
+        "stack_mobile": true,
+        "title": "Why Choose Us?",
+        "content": "",
+        "text_alignment": "center",
+        "items_per_row": 5,
+        "background": "",
+        "background_gradient": "",
+        "text_color": "#000000",
+        "heading_color": "",
+        "heading_gradient": "",
+        "logo_item_background": "#ffffff",
+        "logo_item_border": ""
+      }
+    },
     "featured_product_zxfQHH": {
       "type": "featured-product",
       "blocks": {
@@ -456,65 +515,6 @@
         "background_gradient": "",
         "text_color": "#a53241",
         "text_gradient": ""
-      }
-    },
-    "logo_list_4piqA8": {
-      "type": "logo-list",
-      "blocks": {
-        "logo_X6UNtH": {
-          "type": "logo",
-          "settings": {
-            "logo": "shopify://shop_images/Sous-titre_4.svg",
-            "logo_width": 180,
-            "link": ""
-          }
-        },
-        "logo_i3QUqR": {
-          "type": "logo",
-          "settings": {
-            "logo": "shopify://shop_images/Sous-titre_5.svg",
-            "logo_width": 180,
-            "link": ""
-          }
-        },
-        "logo_bE4VL7": {
-          "type": "logo",
-          "settings": {
-            "logo": "shopify://shop_images/Sous-titre_6.svg",
-            "logo_width": 180,
-            "link": ""
-          }
-        },
-        "logo_rqQGgk": {
-          "type": "logo",
-          "settings": {
-            "logo": "shopify://shop_images/Sous-titre_7.svg",
-            "logo_width": 180,
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "logo_X6UNtH",
-        "logo_i3QUqR",
-        "logo_bE4VL7",
-        "logo_rqQGgk"
-      ],
-      "name": "Logo list",
-      "settings": {
-        "full_width": true,
-        "stack_mobile": true,
-        "title": "",
-        "content": "",
-        "text_alignment": "center",
-        "items_per_row": 5,
-        "background": "",
-        "background_gradient": "",
-        "text_color": "",
-        "heading_color": "",
-        "heading_gradient": "",
-        "logo_item_background": "#ffffff",
-        "logo_item_border": ""
       }
     },
     "rich_text_bg8Xxn": {
