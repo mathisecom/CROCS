@@ -521,13 +521,25 @@
             "title": "Perfect fit, cool design",
             "content": "<p><em>Perfect fit, cool design, and really durable. Definitely worth it if you’re a Spider-Man fan!</em></p>"
           }
+        },
+        "testimonial_fLqJCm": {
+          "type": "testimonial",
+          "settings": {
+            "round_avatar": true,
+            "show_rating": true,
+            "rating": 4,
+            "author": "Isabella R.",
+            "title": "Good quality",
+            "content": "<p><em>Good quality and fun to wear. The colors pop and they look even better in real life.</em></p>"
+          }
         }
       },
       "block_order": [
         "testimonial_BgagQh",
         "testimonial_Kqkq6A",
         "testimonial_U9tjhL",
-        "testimonial_kGBTmU"
+        "testimonial_kGBTmU",
+        "testimonial_fLqJCm"
       ],
       "name": "Testimonials",
       "settings": {
