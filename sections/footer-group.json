@@ -59,6 +59,7 @@
         "customer-support",
         "discount"
       ],
+      "disabled": true,
       "settings": {
         "full_width": true,
         "stack_on_mobile": false,
@@ -77,10 +78,9 @@
         "newsletter": {
           "type": "newsletter",
           "settings": {
-            "image": "shopify://shop_images/Logo_10_1.png",
             "image_width": 180,
-            "heading_size": "h3",
-            "title": "Sign up for new stories and personal offers",
+            "heading_size": "h4",
+            "title": "Newsletter",
             "content": ""
           }
         },
@@ -95,9 +95,9 @@
         "text": {
           "type": "text",
           "settings": {
-            "title": "Contact US",
+            "title": "Contactez-Nous",
             "content": "<p>contact@crocweb.com<br/><br/><strong>Hours:</strong>Mon–Fri 9:00 AM–12:00 PM & 1:00 PM–6:00 PM / Sat & Sun 10:00 AM–12:00 PM</p>",
-            "enable_follow_on_shop": true
+            "enable_follow_on_shop": false
           }
         }
       },

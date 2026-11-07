@@ -9,49 +9,6 @@
  */
 {
   "sections": {
-    "slideshow_GypkUB": {
-      "type": "slideshow",
-      "blocks": {
-        "image_y6jUAV": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/G3TAapWW8AA2lDV.jpg",
-            "mobile_image": "shopify://shop_images/G3TAapWW8AA2lDV.jpg",
-            "content_max_width": 780,
-            "mobile_text_position": "place-self-end-center text-center",
-            "desktop_text_position": "sm:place-self-center sm:text-center",
-            "subheading": "ONLINE EXCLUSIVE",
-            "title": "Spider-Man Marvel x Crocs",
-            "heading_tag": "h2",
-            "button_text": "BUY NOW",
-            "button_link": "#shopify-section-template--26344520057214__featured_product_zxfQHH",
-            "text_color": "#ffffff",
-            "button_background": "#a53241",
-            "button_text_color": "#ffffff",
-            "overlay_color": "#000000",
-            "overlay_opacity": 24,
-            "background": "",
-            "background_gradient": ""
-          }
-        }
-      },
-      "block_order": [
-        "image_y6jUAV"
-      ],
-      "name": "Slideshow",
-      "settings": {
-        "full_width": true,
-        "allow_transparent_header": true,
-        "show_initial_transition": false,
-        "image_size": "lg",
-        "controls_type": "dots",
-        "transition_type": "fade_with_text",
-        "autoplay": false,
-        "cycle_speed": 6,
-        "background": "#f2f2f2",
-        "background_gradient": ""
-      }
-    },
     "rich_text_HyAjkR": {
       "type": "rich-text",
       "blocks": {
@@ -73,6 +30,7 @@
         "subheading_XQeB6Y",
         "subheading_AartzF"
       ],
+      "disabled": true,
       "name": "Rich text",
       "settings": {
         "full_width": true,
@@ -89,7 +47,6 @@
         "item_WT3Ex3": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/BANNER_MOBILE_14.jpg",
             "stretch_image": true,
             "link_text": "",
             "link_url": "",
@@ -102,7 +59,6 @@
         "item_kKX9gE": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/BANNER_MOBILE_11.jpg",
             "stretch_image": true,
             "link_text": "",
             "link_url": "",
@@ -115,7 +71,6 @@
         "item_7cJ8tr": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/BANNER_MOBILE_13.jpg",
             "stretch_image": true,
             "link_text": "",
             "link_url": "",
@@ -128,7 +83,6 @@
         "item_kxFrED": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/BANNER_MOBILE_15.jpg",
             "stretch_image": true,
             "link_text": "",
             "link_url": "",
@@ -141,7 +95,6 @@
         "item_bKriQU": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/BANNER_MOBILE_10.jpg",
             "stretch_image": true,
             "link_text": "",
             "link_url": "",
@@ -154,7 +107,6 @@
         "item_XPJ7YR": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/BANNER_MOBILE_16.jpg",
             "stretch_image": true,
             "link_text": "",
             "link_url": "",
@@ -173,6 +125,7 @@
         "item_bKriQU",
         "item_XPJ7YR"
       ],
+      "disabled": true,
       "name": "Image link blocks",
       "settings": {
         "full_width": false,
@@ -191,6 +144,7 @@
     },
     "scrolling_text_XMCyVT": {
       "type": "scrolling-text",
+      "disabled": true,
       "name": "Scrolling text",
       "settings": {
         "full_width": true,
@@ -211,7 +165,6 @@
         "logo_X6UNtH": {
           "type": "logo",
           "settings": {
-            "logo": "shopify://shop_images/Sous-titre_4.svg",
             "logo_width": 180,
             "link": ""
           }
@@ -219,7 +172,6 @@
         "logo_i3QUqR": {
           "type": "logo",
           "settings": {
-            "logo": "shopify://shop_images/Sous-titre_5.svg",
             "logo_width": 180,
             "link": ""
           }
@@ -227,7 +179,6 @@
         "logo_bE4VL7": {
           "type": "logo",
           "settings": {
-            "logo": "shopify://shop_images/Sous-titre_6.svg",
             "logo_width": 180,
             "link": ""
           }
@@ -235,7 +186,6 @@
         "logo_rqQGgk": {
           "type": "logo",
           "settings": {
-            "logo": "shopify://shop_images/Sous-titre_7.svg",
             "logo_width": 180,
             "link": ""
           }
@@ -247,6 +197,7 @@
         "logo_bE4VL7",
         "logo_rqQGgk"
       ],
+      "disabled": true,
       "name": "Logo list",
       "settings": {
         "full_width": true,
@@ -262,149 +213,6 @@
         "heading_gradient": "",
         "logo_item_background": "#ffffff",
         "logo_item_border": ""
-      }
-    },
-    "featured_product_zxfQHH": {
-      "type": "featured-product",
-      "blocks": {
-        "liquid_itm6Dw": {
-          "type": "liquid",
-          "settings": {
-            "liquid": "<div class=\"product-info__block-item\" data-block-id=\"liquid_bN4zmb\" data-block-type=\"liquid\">\n  <div class=\"product-info__liquid\">\n    <div class=\"product-info__block-item\" data-block-id=\"liquid_Bij9WM\" data-block-type=\"liquid\">\n      <div class=\"product-info__liquid\">\n        <div class=\"main-product__block main-product__block-custom_liquid\">\n          <div class=\"m-product-text\">\n            <style>\n              .badges-container {\n                display: flex;\n                gap: 6px; /* Space between badges */\n                align-items: center;\n                margin-bottom: 20px; /* Space below badges */\n              }\n\n              .badge {\n                display: inline-block;\n                padding: 4px 12px;\n                font-size: 12px;\n                font-weight: bold;\n                color: white;\n                background: #A53241; /* Updated color */\n                border-radius: 0; /* Straight corners */\n                text-transform: uppercase;\n                white-space: nowrap;\n              }\n            </style>\n\n            <div class=\"badges-container\">\n              <div class=\"badge\">BESTSELLER</div>\n              <div class=\"badge\">FALL SALE: -50%</div>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>"
-          }
-        },
-        "text_tQFtfg": {
-          "type": "text",
-          "settings": {
-            "text": "<h2>Spider-Man Marvel x Crocs</h2>"
-          }
-        },
-        "liquid_npihyB": {
-          "type": "liquid",
-          "settings": {
-            "liquid": "<div class=\"product-info__block-item\" data-block-id=\"liquid_VEVfRm\" data-block-type=\"liquid\">\n  <div class=\"product-info__liquid\">\n    <div class=\"product-info__block-item\" data-block-id=\"liquid_Dk6a4W\" data-block-type=\"liquid\">\n      <div class=\"product-info__liquid\">\n        <div class=\"main-product__block main-product__block-custom_liquid\" style=\"padding-top: 0;\">\n          <div class=\"m-product-text\">\n            <div class=\"product-info__liquid\">\n              <a class=\"image-size\" style=\"display: flex; align-items: center; gap: 8px;\">\n                <img src=\"https://cdn.shopify.com/s/files/1/0776/3751/7627/files/avis.png?v=1687213619\" alt=\"Stars\" width=\"63\" height=\"13\">\n                <span class=\"text-size\">Rated <b>4.8/5</b> based on 3,380 reviews</span>\n              </a>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>"
-          }
-        },
-        "badges_76Vcni": {
-          "type": "badges",
-          "settings": {}
-        },
-        "kaching_bundles_app_block_CUzAPy": {
-          "type": "shopify://apps/kaching-bundles/blocks/app-block/6c637362-a106-4a32-94ac-94dcfd68cdb8",
-          "settings": {
-            "product": "{{section.settings.product}}"
-          }
-        },
-        "liquid_xAX7mB": {
-          "type": "liquid",
-          "settings": {
-            "liquid": "<div class=\"product-info__block-item\" data-block-id=\"liquid_QYab3M\" data-block-type=\"liquid\">\n  <div class=\"product-info__liquid\">\n    <div id=\"shopify-block-AbnNTSktUa2JRYy81U__ai_gen_block_1103b2d_rTFQ8L\" class=\"shopify-block\">\n\n      <!-- Import Plus Jakarta Sans font -->\n      <link href=\"https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600&amp;display=swap\" rel=\"stylesheet\">\n\n      <style data-shopify=\"\">\n        .ai-stock-status-abnntsktua2jryy81uaigenblock1103b2drtfq8l {\n          display: inline-flex;\n          align-items: center;\n          gap: 8px;\n          font-family: 'Plus Jakarta Sans', sans-serif;\n          font-size: 12px;\n          line-height: 1.2;\n        }\n\n        .ai-stock-status-dot-abnntsktua2jryy81uaigenblock1103b2drtfq8l {\n          width: 10px;\n          height: 10px;\n          border-radius: 50%;\n          flex-shrink: 0;\n        }\n\n        .ai-stock-status-dot-abnntsktua2jryy81uaigenblock1103b2drtfq8l--almost-out {\n          background-color: #ff8c00;\n          animation: ai-stock-pulse-abnntsktua2jryy81uaigenblock1103b2drtfq8l 1.5s ease-in-out infinite;\n        }\n\n        .ai-stock-status-dot-abnntsktua2jryy81uaigenblock1103b2drtfq8l--out-of-stock {\n          background-color: #dc2626;\n          animation: ai-stock-pulse-abnntsktua2jryy81uaigenblock1103b2drtfq8l 1.5s ease-in-out infinite;\n        }\n\n        .ai-stock-status-dot-abnntsktua2jryy81uaigenblock1103b2drtfq8l--in-stock {\n          background-color: #16a34a;\n          animation: ai-stock-pulse-abnntsktua2jryy81uaigenblock1103b2drtfq8l 1.5s ease-in-out infinite;\n        }\n\n        .ai-stock-status-text-abnntsktua2jryy81uaigenblock1103b2drtfq8l {\n          margin: 0;\n          font-weight: 500;\n        }\n\n        .ai-stock-status-text-abnntsktua2jryy81uaigenblock1103b2drtfq8l--almost-out {\n          color: #ff8c00;\n        }\n\n        .ai-stock-status-text-abnntsktua2jryy81uaigenblock1103b2drtfq8l--out-of-stock {\n          color: #dc2626;\n        }\n\n        .ai-stock-status-text-abnntsktua2jryy81uaigenblock1103b2drtfq8l--in-stock {\n          color: #16a34a;\n        }\n\n        @keyframes ai-stock-pulse-abnntsktua2jryy81uaigenblock1103b2drtfq8l {\n          0% {\n            opacity: 1;\n            transform: scale(1);\n          }\n          50% {\n            opacity: 0.5;\n            transform: scale(0.9);\n          }\n          100% {\n            opacity: 1;\n            transform: scale(1);\n          }\n        }\n      </style>\n\n      <div class=\"ai-stock-status-abnntsktua2jryy81uaigenblock1103b2drtfq8l\">\n        <div class=\"ai-stock-status-dot-abnntsktua2jryy81uaigenblock1103b2drtfq8l ai-stock-status-dot-abnntsktua2jryy81uaigenblock1103b2drtfq8l--almost-out\"></div>\n        <span class=\"ai-stock-status-text-abnntsktua2jryy81uaigenblock1103b2drtfq8l ai-stock-status-text-abnntsktua2jryy81uaigenblock1103b2drtfq8l--almost-out\">\n          Almost out of stock: 11 left\n        </span>\n      </div>\n\n    </div>\n  </div>\n</div>"
-          }
-        },
-        "price_Cn9dKJ": {
-          "type": "price",
-          "disabled": true,
-          "settings": {
-            "show_taxes_notice": false
-          }
-        },
-        "description_yAqMnX": {
-          "type": "description",
-          "disabled": true,
-          "settings": {
-            "icon": "none",
-            "icon_width": 20,
-            "collapse_content": false
-          }
-        },
-        "variant_picker_NT48nN": {
-          "type": "variant_picker",
-          "disabled": true,
-          "settings": {
-            "hide_sold_out_variants": false,
-            "stack_blocks": true,
-            "selector_style": "block",
-            "swatch_selector_style": "swatch",
-            "variant_image_options": "",
-            "size_chart_page": ""
-          }
-        },
-        "quantity_selector_rRJW6r": {
-          "type": "quantity_selector",
-          "disabled": true,
-          "settings": {}
-        },
-        "buy_buttons_RrYfBB": {
-          "type": "buy_buttons",
-          "settings": {
-            "show_payment_button": false,
-            "show_gift_card_recipient": false,
-            "atc_button_background": "",
-            "atc_button_text_color": "",
-            "payment_button_background": "",
-            "payment_button_text_color": ""
-          }
-        },
-        "liquid_Pz4AxB": {
-          "type": "liquid",
-          "settings": {
-            "liquid": "<div class=\"main-product__block main-product__block-custom_liquid\">\n  <div class=\"m-product-text\">\n    <div class=\"main-product__block main-product__block-custom_liquid\">\n      <div class=\"m-product-text\">\n        <style>\n          #delivery-container {\n            display: flex;\n            align-items: center;\n            justify-content: center;\n            font-size: 0.75rem; /* Smaller text */\n            margin-bottom: 0.8rem;\n          }\n          #delivery-icon {\n            margin-right: 0.3rem;\n            vertical-align: middle;\n            width: 14px;\n            height: 14px;\n          }\n          #delivery-text {\n            margin: 0;\n          }\n          #delivery-date {\n            font-weight: bold;\n          }\n          .product-info__block-item.product-info__block-item-small #delivery-container {\n            margin-bottom: calc(var(--product-info-gap) / 5);\n          }\n          @media screen and (max-width: 749px) {\n            #delivery-container {\n              font-size: 0.7rem; /* Slightly smaller on mobile */\n            }\n          }\n        </style>\n\n        <div id=\"delivery-container\">\n          <svg id=\"delivery-icon\" xmlns=\"http://www.w3.org/2000/svg\" width=\"14\" height=\"14\" viewBox=\"0 0 14 13\" fill=\"none\">\n            <path d=\"M8.60809 0.914506L8.6081 0.914508L13.2956 3.49263C13.3613 3.52876 13.416 3.58186 13.4542 3.64639C13.4924 3.71091 13.5125 3.78449 13.5125 3.85945V9.95319C13.5125 10.0282 13.4924 10.1017 13.4542 10.1663C13.416 10.2308 13.3613 10.2839 13.2956 10.32L8.6081 12.8981L8.63219 12.9419L8.60809 12.8981C8.54626 12.9322 8.47683 12.95 8.40626 12.95C8.33568 12.95 8.26625 12.9322 8.20442 12.8981L8.18032 12.9419L8.20442 12.8981L6.13043 11.7574L6.53408 11.0242L7.91341 11.7829L7.98751 11.8237V11.7391V6.7146V6.68504L7.9616 6.67079L3.51693 4.22627C3.45128 4.19012 3.39653 4.13702 3.3584 4.07249C3.32027 4.00797 3.30015 3.9344 3.30015 3.85945C3.30015 3.7845 3.32027 3.71092 3.3584 3.6464C3.39653 3.58188 3.45128 3.52877 3.51693 3.49262L8.20442 0.914508L8.20442 0.914506C8.26625 0.880489 8.33568 0.862653 8.40626 0.862653C8.47683 0.862653 8.54626 0.880489 8.60809 0.914506ZM8.43035 1.77282L8.40626 1.75957L8.38216 1.77282L4.66732 3.81563L4.58765 3.85945L4.66732 3.90326L8.38216 5.94607L8.40626 5.95932L8.43035 5.94607L12.1452 3.90326L12.2249 3.85945L12.1452 3.81563L8.43035 1.77282ZM12.6491 9.71998L12.675 9.70573V9.67617V4.65163V4.56707L12.6009 4.60782L8.85091 6.67032L8.82501 6.68457V6.71413V11.7387V11.8232L8.8991 11.7825L12.6491 9.71998Z\" fill=\"black\" stroke=\"#E9E9E9\" stroke-width=\"0.1\"></path>\n            <path d=\"M4.0625 6.78131H0.5625V6.09381H4.0625V6.78131ZM5 10.5313H1.5V9.84381H5V10.5313ZM5.9375 8.65631H2.4375V7.96881H5.9375V8.65631Z\" fill=\"black\" stroke=\"#FBFAF9\" stroke-width=\"0.25\"></path>\n          </svg>\n          <p id=\"delivery-text\">Order now and receive it by <span id=\"delivery-date\">Wednesday, October 29</span></p>\n        </div>\n\n        <script>\n          function calculateDeliveryDate(country) {\n            let today = new Date();\n            let deliveryDate;\n\n            if (country === 'France') {\n              deliveryDate = new Date(today.setDate(today.getDate() + 7));\n            } else if (country === 'Europe') {\n              deliveryDate = new Date(today.setDate(today.getDate() + 7));\n            } else {\n              deliveryDate = new Date(today.setDate(today.getDate() + 7));\n            }\n\n            let options = { weekday: 'long', month: 'long', day: 'numeric' };\n            return deliveryDate.toLocaleDateString('en-US', options);\n          }\n\n          function fetchCountry() {\n            fetch('https://ipapi.co/json/')\n              .then(response => response.json())\n              .then(data => {\n                let country = data.country_name;\n                let deliveryDate = calculateDeliveryDate(country);\n                document.getElementById('delivery-date').textContent = deliveryDate;\n              })\n              .catch(error => {\n                console.error('Error fetching location:', error);\n                let deliveryDate = calculateDeliveryDate('France');\n                document.getElementById('delivery-date').textContent = deliveryDate;\n              });\n          }\n\n          fetchCountry();\n        </script>\n      </div>\n    </div>\n  </div>\n</div>"
-          }
-        },
-        "collapsible_text_QMxJ4T": {
-          "type": "collapsible_text",
-          "settings": {
-            "icon": "none",
-            "icon_width": 20,
-            "title": "Delivery Information",
-            "content": "<p>Standard delivery: 5–7 days worldwide</p>",
-            "page": ""
-          }
-        },
-        "collapsible_text_nwCzRP": {
-          "type": "collapsible_text",
-          "settings": {
-            "icon": "none",
-            "icon_width": 20,
-            "title": "14 days to change your mind",
-            "content": "<p>For orders placed, you have 14 days (from the date of receipt of the item) to change your mind.</p>",
-            "page": ""
-          }
-        }
-      },
-      "block_order": [
-        "liquid_itm6Dw",
-        "text_tQFtfg",
-        "liquid_npihyB",
-        "badges_76Vcni",
-        "kaching_bundles_app_block_CUzAPy",
-        "liquid_xAX7mB",
-        "price_Cn9dKJ",
-        "description_yAqMnX",
-        "variant_picker_NT48nN",
-        "quantity_selector_rRJW6r",
-        "buy_buttons_RrYfBB",
-        "liquid_Pz4AxB",
-        "collapsible_text_QMxJ4T",
-        "collapsible_text_nwCzRP"
-      ],
-      "name": "Featured product",
-      "settings": {
-        "full_width": true,
-        "product": "spider-man-marvel-x-crocs",
-        "desktop_media_width": 55,
-        "desktop_media_layout": "carousel_thumbnails_left",
-        "mobile_media_size": "expanded",
-        "mobile_carousel_control": "thumbnails",
-        "enable_video_autoplay": true,
-        "enable_video_looping": false,
-        "enable_image_zoom": false,
-        "max_image_zoom_level": 3,
-        "background": "",
-        "background_gradient": "",
-        "text_color": "",
-        "input_background": "rgba(0,0,0,0)",
-        "input_text_color": ""
       }
     },
     "press_bXRLLB": {
@@ -457,6 +265,7 @@
         "quote_JRpHQe",
         "quote_afxXTK"
       ],
+      "disabled": true,
       "name": "Press",
       "settings": {
         "full_width": true,
@@ -476,7 +285,6 @@
         "image_mGcNtV": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/BANNER_MOBILE_12.jpg",
             "media_width": 50,
             "media_position": "start",
             "text_position": "place-self-center text-center",
@@ -499,6 +307,7 @@
       "block_order": [
         "image_mGcNtV"
       ],
+      "disabled": true,
       "name": "Media with text",
       "settings": {
         "full_width": false,
@@ -508,6 +317,7 @@
     },
     "scrolling_text_gBKLYp": {
       "type": "scrolling-text",
+      "disabled": true,
       "name": "Scrolling text",
       "settings": {
         "full_width": true,
@@ -545,6 +355,7 @@
         "subheading_Wkexec",
         "heading_LNtUPP"
       ],
+      "disabled": true,
       "name": "Rich text",
       "settings": {
         "full_width": true,
@@ -561,7 +372,6 @@
         "item_Lj7FmR": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/BANNER_MOBILE_14.jpg",
             "stretch_image": true,
             "link_text": "",
             "link_url": "",
@@ -574,7 +384,6 @@
         "item_qWiqKJ": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/BANNER_MOBILE_11.jpg",
             "stretch_image": true,
             "link_text": "",
             "link_url": "",
@@ -587,7 +396,6 @@
         "item_YqTxhf": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/BANNER_MOBILE_13.jpg",
             "stretch_image": true,
             "link_text": "",
             "link_url": "",
@@ -600,7 +408,6 @@
         "item_nYDQxc": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/BANNER_MOBILE_15.jpg",
             "stretch_image": true,
             "link_text": "",
             "link_url": "",
@@ -613,7 +420,6 @@
         "item_MMha8p": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/BANNER_MOBILE_10.jpg",
             "stretch_image": true,
             "link_text": "",
             "link_url": "",
@@ -626,7 +432,6 @@
         "item_JyHwqp": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/BANNER_MOBILE_16.jpg",
             "stretch_image": true,
             "link_text": "",
             "link_url": "",
@@ -645,6 +450,7 @@
         "item_MMha8p",
         "item_JyHwqp"
       ],
+      "disabled": true,
       "name": "Image link blocks",
       "settings": {
         "full_width": false,
@@ -727,6 +533,7 @@
         "testimonial_kGBTmU",
         "testimonial_fLqJCm"
       ],
+      "disabled": true,
       "name": "Testimonials",
       "settings": {
         "full_width": true,
@@ -775,6 +582,7 @@
         "item_hMyen7",
         "item_JpUidc"
       ],
+      "disabled": true,
       "name": "FAQ",
       "settings": {
         "full_width": true,
@@ -800,12 +608,10 @@
     }
   },
   "order": [
-    "slideshow_GypkUB",
     "rich_text_HyAjkR",
     "image_link_blocks_BEw99L",
     "scrolling_text_XMCyVT",
     "logo_list_4piqA8",
-    "featured_product_zxfQHH",
     "press_bXRLLB",
     "media_with_text_Xg7Rwg",
     "scrolling_text_gBKLYp",
