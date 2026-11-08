@@ -79,7 +79,7 @@
           "type": "newsletter",
           "settings": {
             "image": "shopify://shop_images/80c84cf9-cb30-4933-86fd-b68709d41f18_1_79856a43-f682-4981-9d71-6e46700d2a31.png",
-            "image_width": 60,
+            "image_width": 50,
             "heading_size": "h4",
             "title": "Newsletter",
             "content": ""
@@ -97,7 +97,7 @@
           "type": "text",
           "settings": {
             "title": "Contact US",
-            "content": "<p>contact@louis-dante.com<br/><br/><strong>Hours:</strong>Mon–Fri 9:00 AM–12:00 PM & 1:00 PM–6:00 PM / Sat & Sun 10:00 AM–12:00 PM</p>",
+            "content": "<p>contact@louis-dante.com<br/><br/><strong>Hours: </strong>Mon–Fri 9:00 AM–12:00 PM & 1:00 PM–6:00 PM / Sat & Sun 10:00 AM–12:00 PM</p>",
             "enable_follow_on_shop": false
           }
         }
