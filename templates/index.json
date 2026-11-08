@@ -21,32 +21,10 @@
             "price_text": "",
             "link": ""
           }
-        },
-        "product_card_FgAtnz": {
-          "type": "product_card",
-          "settings": {
-            "product": "",
-            "title": "REMONTOIR CASSIOPÉE",
-            "subtitle": "4 montres",
-            "price_text": "À partir de 264,99 €",
-            "link": ""
-          }
-        },
-        "product_card_by68tU": {
-          "type": "product_card",
-          "settings": {
-            "product": "",
-            "title": "ÉTUI TRAVERSÉE",
-            "subtitle": "4 montres",
-            "price_text": "À partir de 54,99 €",
-            "link": ""
-          }
         }
       },
       "block_order": [
-        "product_card_PXawfJ",
-        "product_card_FgAtnz",
-        "product_card_by68tU"
+        "product_card_PXawfJ"
       ],
       "name": "Favoris clients - Slider",
       "settings": {
@@ -57,7 +35,7 @@
         "view_all_url": "",
         "promo_title": "Découvrir toute la",
         "promo_script": "collection",
-        "promo_cta": "EXPLORER LA COLLECTION",
+        "promo_cta": "",
         "promo_url": "",
         "overlay_color": "#000000",
         "overlay_opacity": 25,
