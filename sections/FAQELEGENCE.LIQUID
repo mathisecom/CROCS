@@ -1,0 +1,407 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Luxurious+Script&display=swap" rel="stylesheet">
+
+<section
+  class="elegant-faq"
+  style="
+    --ef-bg: {{ section.settings.background_color }};
+    --ef-heading: {{ section.settings.heading_color }};
+    --ef-text: {{ section.settings.text_color }};
+    --ef-muted: {{ section.settings.muted_color }};
+    --ef-line: {{ section.settings.line_color }};
+    --ef-max: {{ section.settings.max_width }}px;
+    --ef-left: {{ section.settings.left_column_width }}%;
+    --ef-gap: {{ section.settings.column_gap }}px;
+    --ef-top: {{ section.settings.padding_top }}px;
+    --ef-bottom: {{ section.settings.padding_bottom }}px;
+    --ef-side: {{ section.settings.padding_side }}px;
+    --ef-title-size: {{ section.settings.title_size }}px;
+    --ef-script-size: {{ section.settings.script_size }}px;
+    --ef-body-size: {{ section.settings.body_size }}px;
+    --ef-question-size: {{ section.settings.question_size }}px;
+    --ef-answer-size: {{ section.settings.answer_size }}px;
+    --ef-row-pad: {{ section.settings.row_padding }}px;
+    --ef-mobile-top: {{ section.settings.mobile_padding_top }}px;
+    --ef-mobile-bottom: {{ section.settings.mobile_padding_bottom }}px;
+    --ef-mobile-side: {{ section.settings.mobile_padding_side }}px;
+    --ef-mobile-title: {{ section.settings.mobile_title_size }}px;
+    --ef-mobile-script: {{ section.settings.mobile_script_size }}px;
+  "
+>
+  <div class="elegant-faq__container">
+    <div class="elegant-faq__intro">
+      {% if section.settings.eyebrow != blank %}
+        <p class="elegant-faq__eyebrow">{{ section.settings.eyebrow | escape }}</p>
+      {% endif %}
+
+      {% if section.settings.title != blank or section.settings.script_title != blank %}
+        <h2 class="elegant-faq__title">
+          {% if section.settings.title != blank %}
+            <span class="elegant-faq__title-main">{{ section.settings.title | escape }}</span>
+          {% endif %}
+          {% if section.settings.script_title != blank %}
+            <span class="elegant-faq__title-script">{{ section.settings.script_title | escape }}</span>
+          {% endif %}
+        </h2>
+      {% endif %}
+
+      {% if section.settings.description != blank %}
+        <div class="elegant-faq__description rte">{{ section.settings.description }}</div>
+      {% endif %}
+
+      {% if section.settings.button_label != blank %}
+        {% if section.settings.button_link != blank %}
+          <a class="elegant-faq__link" href="{{ section.settings.button_link }}">
+            <span>{{ section.settings.button_label | escape }}</span>
+            <span class="elegant-faq__link-arrow" aria-hidden="true">↗</span>
+          </a>
+        {% else %}
+          <a class="elegant-faq__link" href="mailto:{{ shop.email | escape }}">
+            <span>{{ section.settings.button_label | escape }}</span>
+            <span class="elegant-faq__link-arrow" aria-hidden="true">↗</span>
+          </a>
+        {% endif %}
+      {% endif %}
+    </div>
+
+    <div class="elegant-faq__questions">
+      {% for block in section.blocks %}
+        {% if block.type == 'question' %}
+          <details class="elegant-faq__item" {% if block.settings.open_on_load %}open{% endif %} {{ block.shopify_attributes }}>
+            <summary class="elegant-faq__question">
+              <span>{{ block.settings.heading | escape }}</span>
+              <span class="elegant-faq__toggle" aria-hidden="true"></span>
+            </summary>
+            {% if block.settings.answer != blank %}
+              <div class="elegant-faq__answer rte">{{ block.settings.answer }}</div>
+            {% endif %}
+          </details>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% stylesheet %}
+  .elegant-faq {
+    background: var(--ef-bg);
+    color: var(--ef-heading);
+    padding: var(--ef-top) var(--ef-side) var(--ef-bottom);
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .elegant-faq *,
+  .elegant-faq *::before,
+  .elegant-faq *::after {
+    box-sizing: border-box;
+  }
+
+  .elegant-faq__container {
+    max-width: var(--ef-max);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: minmax(0, var(--ef-left)) minmax(0, 1fr);
+    column-gap: var(--ef-gap);
+    align-items: start;
+  }
+
+  .elegant-faq__intro {
+    min-width: 0;
+  }
+
+  .elegant-faq__eyebrow {
+    font-family: var(--font-body-family, inherit);
+    color: var(--ef-heading);
+    font-size: 10px;
+    line-height: 1.5;
+    font-weight: 600;
+    letter-spacing: .19em;
+    text-transform: uppercase;
+    margin: 0 0 24px;
+  }
+
+  .elegant-faq__title {
+    color: var(--ef-heading);
+    font-family: var(--font-heading-family, var(--font-body-family, inherit));
+    font-size: var(--ef-title-size);
+    font-weight: 400;
+    line-height: 1.16;
+    letter-spacing: -.035em;
+    margin: 0;
+  }
+
+  .elegant-faq__title-main,
+  .elegant-faq__title-script {
+    display: block;
+  }
+
+  .elegant-faq__title-script {
+    font-family: 'Luxurious Script', cursive;
+    font-size: var(--ef-script-size);
+    font-style: italic;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 1.3;
+    margin-top: 4px;
+  }
+
+  .elegant-faq__description {
+    color: var(--ef-text);
+    font-family: var(--font-body-family, inherit);
+    font-size: var(--ef-body-size);
+    font-weight: 400;
+    line-height: 1.75;
+    max-width: 345px;
+    margin: 20px 0 25px;
+  }
+
+  .elegant-faq__description p,
+  .elegant-faq__answer p {
+    margin: 0 0 .8em;
+  }
+
+  .elegant-faq__description p:last-child,
+  .elegant-faq__answer p:last-child {
+    margin-bottom: 0;
+  }
+
+  .elegant-faq__link {
+    color: var(--ef-heading);
+    font-family: var(--font-body-family, inherit);
+    font-size: 10px;
+    font-weight: 600;
+    line-height: 1.5;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: .12em;
+    display: inline-flex;
+    align-items: center;
+    gap: 18px;
+    padding: 0 0 12px;
+    border-bottom: 1px solid var(--ef-heading);
+    transition: opacity .2s ease;
+  }
+
+  .elegant-faq__link:hover {
+    opacity: .65;
+  }
+
+  .elegant-faq__link-arrow {
+    font-family: var(--font-body-family, inherit);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1;
+  }
+
+  .elegant-faq__questions {
+    min-width: 0;
+    border-top: 1px solid var(--ef-line);
+  }
+
+  .elegant-faq__item {
+    border-bottom: 1px solid var(--ef-line);
+  }
+
+  .elegant-faq__question {
+    color: var(--ef-heading);
+    font-family: var(--font-body-family, inherit);
+    font-size: var(--ef-question-size);
+    font-weight: 500;
+    line-height: 1.6;
+    margin: 0;
+    padding: var(--ef-row-pad) 0;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  .elegant-faq__question::-webkit-details-marker {
+    display: none;
+  }
+
+  .elegant-faq__question::marker {
+    content: '';
+  }
+
+  .elegant-faq__question:focus-visible,
+  .elegant-faq__link:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 4px;
+  }
+
+  .elegant-faq__toggle {
+    width: 14px;
+    height: 14px;
+    position: relative;
+    flex: 0 0 14px;
+    color: var(--ef-heading);
+  }
+
+  .elegant-faq__toggle::before,
+  .elegant-faq__toggle::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background: currentColor;
+    transform: translate(-50%, -50%);
+  }
+
+  .elegant-faq__toggle::before {
+    width: 11px;
+    height: 1.5px;
+  }
+
+  .elegant-faq__toggle::after {
+    width: 1.5px;
+    height: 11px;
+    transition: transform .2s ease, opacity .2s ease;
+  }
+
+  .elegant-faq__item[open] .elegant-faq__toggle::after {
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+
+  .elegant-faq__item[open] .elegant-faq__toggle::before {
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+
+  .elegant-faq__answer {
+    color: var(--ef-muted);
+    font-family: var(--font-body-family, inherit);
+    font-size: var(--ef-answer-size);
+    line-height: 1.8;
+    padding: 0 28px 23px 0;
+  }
+
+  .elegant-faq__answer a,
+  .elegant-faq__description a {
+    color: inherit;
+    text-underline-offset: 3px;
+  }
+
+  @media screen and (max-width: 989px) {
+    .elegant-faq__container {
+      grid-template-columns: minmax(0, 1fr);
+      row-gap: 42px;
+    }
+
+    .elegant-faq__description {
+      max-width: 480px;
+    }
+  }
+
+  @media screen and (max-width: 749px) {
+    .elegant-faq {
+      padding: var(--ef-mobile-top) var(--ef-mobile-side) var(--ef-mobile-bottom);
+    }
+
+    .elegant-faq__container {
+      row-gap: 34px;
+    }
+
+    .elegant-faq__eyebrow {
+      margin-bottom: 17px;
+    }
+
+    .elegant-faq__title {
+      font-size: var(--ef-mobile-title);
+    }
+
+    .elegant-faq__title-script {
+      font-size: var(--ef-mobile-script);
+    }
+
+    .elegant-faq__description {
+      margin: 15px 0 20px;
+    }
+
+    .elegant-faq__question {
+      padding: 20px 0;
+      gap: 15px;
+    }
+
+    .elegant-faq__answer {
+      padding: 0 10px 19px 0;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .elegant-faq__link,
+    .elegant-faq__toggle::after {
+      transition: none;
+    }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "FAQ - Conseils élégants",
+  "tag": "section",
+  "class": "section-faq-elegante",
+  "settings": [
+    { "type": "header", "content": "Contenu de gauche" },
+    { "type": "text", "id": "eyebrow", "label": "Petit titre", "default": "AT YOUR SERVICE" },
+    { "type": "text", "id": "title", "label": "Titre principal", "default": "A little guidance" },
+    { "type": "text", "id": "script_title", "label": "Titre manuscrit (Luxurious Script)", "default": "before you choose." },
+    { "type": "richtext", "id": "description", "label": "Paragraphe", "default": "<p>Tell us about your watch, your collection and what you have in mind.</p>" },
+    { "type": "text", "id": "button_label", "label": "Texte du lien", "default": "CONTACT US" },
+    { "type": "url", "id": "button_link", "label": "Lien du bouton", "info": "Si vide, ouvre un e-mail vers l'adresse de la boutique." },
+    { "type": "header", "content": "Couleurs" },
+    { "type": "color", "id": "background_color", "label": "Fond", "default": "#F1EDE6" },
+    { "type": "color", "id": "heading_color", "label": "Titres et questions", "default": "#152336" },
+    { "type": "color", "id": "text_color", "label": "Paragraphe de gauche", "default": "#697482" },
+    { "type": "color", "id": "muted_color", "label": "Descriptions et réponses", "default": "#697482" },
+    { "type": "color", "id": "line_color", "label": "Traits de séparation", "default": "#D6D0C7" },
+    { "type": "header", "content": "Dimensions PC" },
+    { "type": "range", "id": "max_width", "label": "Largeur maximale", "min": 1000, "max": 1800, "step": 20, "unit": "px", "default": 1600 },
+    { "type": "range", "id": "left_column_width", "label": "Largeur colonne gauche", "min": 20, "max": 45, "step": 1, "unit": "%", "default": 39 },
+    { "type": "range", "id": "column_gap", "label": "Espace entre colonnes", "min": 20, "max": 160, "step": 10, "unit": "px", "default": 70 },
+    { "type": "range", "id": "padding_top", "label": "Espace haut", "min": 0, "max": 180, "step": 5, "unit": "px", "default": 80 },
+    { "type": "range", "id": "padding_bottom", "label": "Espace bas", "min": 0, "max": 180, "step": 5, "unit": "px", "default": 80 },
+    { "type": "range", "id": "padding_side", "label": "Marges latérales", "min": 10, "max": 120, "step": 5, "unit": "px", "default": 50 },
+    { "type": "header", "content": "Typographies" },
+    { "type": "range", "id": "title_size", "label": "Taille titre PC", "min": 26, "max": 70, "step": 1, "unit": "px", "default": 44 },
+    { "type": "range", "id": "script_size", "label": "Taille manuscrite PC", "min": 30, "max": 80, "step": 1, "unit": "px", "default": 48 },
+    { "type": "range", "id": "body_size", "label": "Taille paragraphe", "min": 12, "max": 20, "step": 1, "unit": "px", "default": 14 },
+    { "type": "range", "id": "question_size", "label": "Taille des questions", "min": 12, "max": 20, "step": 1, "unit": "px", "default": 13 },
+    { "type": "range", "id": "answer_size", "label": "Taille des réponses", "min": 12, "max": 20, "step": 1, "unit": "px", "default": 14 },
+    { "type": "range", "id": "row_padding", "label": "Hauteur des lignes FAQ", "min": 12, "max": 40, "step": 1, "unit": "px", "default": 24 },
+    { "type": "header", "content": "Version mobile" },
+    { "type": "range", "id": "mobile_title_size", "label": "Taille titre mobile", "min": 24, "max": 48, "step": 1, "unit": "px", "default": 34 },
+    { "type": "range", "id": "mobile_script_size", "label": "Taille manuscrite mobile", "min": 28, "max": 62, "step": 1, "unit": "px", "default": 42 },
+    { "type": "range", "id": "mobile_padding_top", "label": "Espace haut mobile", "min": 0, "max": 100, "step": 5, "unit": "px", "default": 50 },
+    { "type": "range", "id": "mobile_padding_bottom", "label": "Espace bas mobile", "min": 0, "max": 100, "step": 5, "unit": "px", "default": 50 },
+    { "type": "range", "id": "mobile_padding_side", "label": "Marges mobile", "min": 10, "max": 40, "step": 1, "unit": "px", "default": 20 }
+  ],
+  "blocks": [
+    {
+      "type": "question",
+      "name": "Question / Réponse",
+      "settings": [
+        { "type": "text", "id": "heading", "label": "Question", "default": "Votre question ?" },
+        { "type": "richtext", "id": "answer", "label": "Réponse", "default": "<p>Rédigez votre réponse ici.</p>" },
+        { "type": "checkbox", "id": "open_on_load", "label": "Ouvrir par défaut", "default": false }
+      ]
+    }
+  ],
+  "max_blocks": 30,
+  "presets": [
+    {
+      "name": "FAQ - Conseils élégants",
+      "blocks": [
+        { "type": "question", "settings": { "heading": "Will a watch winder work with my watch?", "answer": "<p>Watch winders are intended for compatible automatic watches. Check your movement manufacturer's guidance, including rotation direction and turns per day, alongside the specifications of your chosen winder.</p>" } },
+        { "type": "question", "settings": { "heading": "How many watch spaces should I choose?", "answer": "<p>Consider the automatic watches you rotate between, the space available at home and whether your collection may grow. Compare each model's capacity, cushion fit and dimensions before ordering.</p>" } },
+        { "type": "question", "settings": { "heading": "Which rotation settings should I use?", "answer": "<p>Settings depend on the movement inside your watch. Follow the watch manufacturer's recommendations and select a winder that supports the required rotation direction and turns per day.</p>" } },
+        { "type": "question", "settings": { "heading": "Can I keep my watch winder in the bedroom?", "answer": "<p>Operating sound varies by model and environment. Review the product's motor information and contact us if quiet operation is a priority for you.</p>" } },
+        { "type": "question", "settings": { "heading": "Where can I find shipping and return information?", "answer": "<p>Delivery and return terms are available in the policy links below. Contact us before ordering if you need additional help.</p>" } }
+      ]
+    }
+  ]
+}
+{% endschema %}
