@@ -79,7 +79,7 @@
           "type": "newsletter",
           "settings": {
             "image": "shopify://shop_images/80c84cf9-cb30-4933-86fd-b68709d41f18_1_79856a43-f682-4981-9d71-6e46700d2a31.png",
-            "image_width": 70,
+            "image_width": 60,
             "heading_size": "h4",
             "title": "Newsletter",
             "content": ""
