@@ -20,6 +20,9 @@
   --favs-overlay: {{ section.settings.overlay_color }};
   --favs-overlay-opacity: {{ section.settings.overlay_opacity | divided_by: 100.0 }};
   --favs-promo-color: {{ section.settings.promo_text_color }};
+  --favs-button-bg: {{ section.settings.promo_button_background }};
+  --favs-button-text: {{ section.settings.promo_button_text_color }};
+  --favs-button-radius: {{ section.settings.promo_button_radius }}px;
   --favs-mobile-card: {{ section.settings.mobile_card_width }}%;
   --favs-mobile-title: {{ section.settings.mobile_title_size }}px;
   --favs-mobile-script: {{ section.settings.mobile_script_size }}px;
@@ -63,7 +66,7 @@
             {% endif %}
           </span>
           {% if section.settings.promo_cta != blank %}
-            <span class="favs-promo-cta">
+            <span class="favs-promo-cta favs-promo-cta--{{ section.settings.promo_button_style }}{% if section.settings.promo_button_full_width %} favs-promo-cta--full{% endif %}">
               {{ section.settings.promo_cta | escape }}
               <span aria-hidden="true">↗</span>
             </span>
@@ -72,7 +75,7 @@
       </a>
 
       <div class="favs-carousel" data-favs-carousel>
-        <div class="favs-track" data-favs-track tabindex="0" aria-label="Produits favoris à faire défiler">
+        <div class="favs-track" data-favs-track tabindex="0" aria-label="Featured products carousel">
           {% for block in section.blocks %}
             {% if block.type == 'product_card' %}
               {% assign selected_product = block.settings.product %}
@@ -108,7 +111,7 @@
                   {% endif %}
                 </div>
                 {% if card_link != blank %}
-                  <a class="favs-product-link" href="{{ card_link }}" aria-label="Découvrir {{ card_name | escape }}"></a>
+                  <a class="favs-product-link" href="{{ card_link }}" aria-label="Discover {{ card_name | escape }}"></a>
                 {% endif %}
               </div>
             {% endif %}
@@ -119,10 +122,10 @@
             <span class="favs-progress-fill" data-favs-progress></span>
           </div>
           <div class="favs-arrows">
-            <button class="favs-arrow" type="button" data-favs-prev aria-label="Voir les produits précédents">
+            <button class="favs-arrow" type="button" data-favs-prev aria-label="View previous products">
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5m7 7-7-7 7-7"/></svg>
             </button>
-            <button class="favs-arrow" type="button" data-favs-next aria-label="Voir les produits suivants">
+            <button class="favs-arrow" type="button" data-favs-next aria-label="View next products">
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>
             </button>
           </div>
@@ -153,7 +156,10 @@
   .favs-promo-content { position: absolute; z-index: 1; bottom: 25px; left: 24px; right: 22px; display: flex; flex-direction: column; align-items: flex-start; }
   .favs-promo-heading { font-family: var(--font-heading-family, var(--font-body-family, inherit)); font-size: 25px; line-height: 1.18; font-weight: 400; max-width: 230px; }
   .favs-promo-heading .favs-script { font-size: 32px; white-space: nowrap; }
-  .favs-promo-cta { font-family: var(--font-body-family, inherit); display: inline-flex; align-items: center; justify-content: space-between; gap: 16px; width: 100%; max-width: 210px; font-size: 10px; font-weight: 600; letter-spacing: .18em; line-height: 1.5; border-bottom: 1px solid currentColor; padding: 16px 0 9px; }
+  .favs-promo-cta { font-family: var(--font-body-family, inherit); display: inline-flex; align-items: center; justify-content: space-between; gap: 16px; font-size: 10px; font-weight: 600; letter-spacing: .18em; line-height: 1.5; text-decoration: none; }
+  .favs-promo-cta--line { width: 100%; max-width: 210px; border-bottom: 1px solid currentColor; padding: 16px 0 9px; }
+  .favs-promo-cta--filled { width: auto; max-width: 100%; padding: 12px 14px; border: 1px solid var(--favs-button-bg); border-radius: var(--favs-button-radius); background: var(--favs-button-bg); color: var(--favs-button-text); font-size: 9px; letter-spacing: .12em; }
+  .favs-promo-cta--full { width: 100%; max-width: none; }
   .favs-promo-cta span { font-size: 16px; font-weight: 400; }
   .favs-carousel { min-width: 0; }
   .favs-track { display: grid; grid-auto-flow: column; grid-auto-columns: calc((100% - var(--favs-gap) - var(--favs-gap)) / 3); gap: var(--favs-gap); overflow-x: auto; overscroll-behavior-inline: contain; scroll-snap-type: x mandatory; scroll-behavior: smooth; scrollbar-width: none; -ms-overflow-style: none; }
@@ -243,23 +249,31 @@
   "class": "section-favoris-clients",
   "settings": [
     { "type": "header", "content": "En-tête" },
-    { "type": "text", "id": "title", "label": "Titre", "default": "Les favoris de nos" },
-    { "type": "text", "id": "script_title", "label": "Mot en Luxurious Script", "default": "clients." },
-    { "type": "richtext", "id": "description", "label": "Description", "default": "<p>Les pièces que nos clients choisissent le plus souvent, et qu'ils recommandent ensuite à leurs proches.</p>" },
-    { "type": "text", "id": "view_all_label", "label": "Texte du lien", "default": "Tout voir" },
+    { "type": "text", "id": "title", "label": "Titre", "default": "Our customers'" },
+    { "type": "text", "id": "script_title", "label": "Mot en Luxurious Script", "default": "favourites." },
+    { "type": "richtext", "id": "description", "label": "Description", "default": "<p>The pieces our customers choose most often — and love recommending to others.</p>" },
+    { "type": "text", "id": "view_all_label", "label": "Texte du lien", "default": "View all" },
     { "type": "url", "id": "view_all_url", "label": "Lien Tout voir" },
     { "type": "header", "content": "Carte collection" },
     { "type": "image_picker", "id": "promo_image", "label": "Image collection" },
-    { "type": "text", "id": "promo_title", "label": "Texte sur l'image", "default": "Découvrir toute la" },
+    { "type": "text", "id": "promo_title", "label": "Texte sur l'image", "default": "Discover the entire" },
     { "type": "text", "id": "promo_script", "label": "Mot manuscrit", "default": "collection" },
-    { "type": "text", "id": "promo_cta", "label": "Lien dans l'image", "default": "EXPLORER LA COLLECTION" },
+    { "type": "text", "id": "promo_cta", "label": "Texte du bouton collection", "default": "EXPLORE THE COLLECTION" },
     { "type": "url", "id": "promo_url", "label": "Destination collection" },
+    { "type": "select", "id": "promo_button_style", "label": "Style du bouton collection", "options": [
+      { "value": "filled", "label": "Plein (fond coloré)" },
+      { "value": "line", "label": "Lien souligné" }
+    ], "default": "filled" },
+    { "type": "checkbox", "id": "promo_button_full_width", "label": "Bouton sur toute la largeur", "default": false },
+    { "type": "color", "id": "promo_button_background", "label": "Fond du bouton plein", "default": "#FFFFFF" },
+    { "type": "color", "id": "promo_button_text_color", "label": "Texte du bouton plein", "default": "#192534" },
+    { "type": "range", "id": "promo_button_radius", "label": "Arrondi du bouton plein", "min": 0, "max": 20, "step": 1, "unit": "px", "default": 4 },
     { "type": "color", "id": "overlay_color", "label": "Couleur de l'ombre", "default": "#000000" },
     { "type": "range", "id": "overlay_opacity", "label": "Intensité de l'ombre", "min": 0, "max": 80, "step": 5, "unit": "%", "default": 25 },
     { "type": "color", "id": "promo_text_color", "label": "Texte de l'image", "default": "#FFFFFF" },
     { "type": "header", "content": "Produits" },
     { "type": "checkbox", "id": "show_prices", "label": "Afficher les prix", "default": true },
-    { "type": "text", "id": "price_prefix", "label": "Avant le prix", "default": "À partir de" },
+    { "type": "text", "id": "price_prefix", "label": "Avant le prix", "default": "From" },
     { "type": "select", "id": "product_ratio", "label": "Format des images produit", "options": [
       { "value": "0.8", "label": "Portrait 4:5" },
       { "value": "1", "label": "Carré" },
@@ -307,9 +321,9 @@
     {
       "name": "Favoris clients - Slider",
       "blocks": [
-        { "type": "product_card", "settings": { "title": "BOÎTE OPÉRA", "subtitle": "6 montres", "price_text": "À partir de 134,99 €" } },
-        { "type": "product_card", "settings": { "title": "REMONTOIR CASSIOPÉE", "subtitle": "4 montres", "price_text": "À partir de 264,99 €" } },
-        { "type": "product_card", "settings": { "title": "ÉTUI TRAVERSÉE", "subtitle": "4 montres", "price_text": "À partir de 54,99 €" } }
+        { "type": "product_card", "settings": { "title": "OPERA WATCH BOX", "subtitle": "6 watches", "price_text": "From €134.99" } },
+        { "type": "product_card", "settings": { "title": "CASSIOPEIA WATCH WINDER", "subtitle": "4 watches", "price_text": "From €264.99" } },
+        { "type": "product_card", "settings": { "title": "TRAVEL WATCH CASE", "subtitle": "4 watches", "price_text": "From €54.99" } }
       ]
     }
   ]
