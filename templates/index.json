@@ -63,7 +63,7 @@
       "settings": {
         "title": "Our Customers'",
         "script_title": "Favorites.",
-        "description": "<p>The items our customers choose most often—and then recommend to their friends and family.</p>",
+        "description": "",
         "view_all_label": "",
         "view_all_url": "",
         "promo_image": "shopify://shop_images/957a7269-a59c-4741-b059-77c96805db3e.png",
@@ -127,18 +127,18 @@
       "settings": {
         "background_position": "center center",
         "background_blur": 4,
-        "overlay_color": "#2B211B",
+        "overlay_color": "#2b211b",
         "overlay_opacity": 35,
         "eyebrow": "Rated 5.0/5 by our customers",
         "show_top_stars": true,
         "title": "They chose",
         "script_title": "Louis Dante.",
-        "title_color": "#FFFFFF",
+        "title_color": "#ffffff",
         "title_size": 43,
         "script_size": 63,
-        "card_background": "#F5F1EC",
-        "card_text_color": "#17283A",
-        "card_muted_color": "#6E7480",
+        "card_background": "#f5f1ec",
+        "card_text_color": "#17283a",
+        "card_muted_color": "#6e7480",
         "stars_color": "#000000",
         "show_review_stars": true,
         "card_width": 500,
@@ -154,6 +154,100 @@
         "mobile_quote_size": 16,
         "mobile_padding_top": 20,
         "mobile_padding_bottom": 20
+      }
+    },
+    "collectionbestseller_xwdb9H": {
+      "type": "collectionbestseller",
+      "blocks": {
+        "product_card_BMJQY8": {
+          "type": "product_card",
+          "settings": {
+            "product": "",
+            "title": "",
+            "subtitle": "",
+            "price_text": "",
+            "link": ""
+          }
+        },
+        "product_card_4YykBm": {
+          "type": "product_card",
+          "settings": {
+            "product": "",
+            "title": "",
+            "subtitle": "",
+            "price_text": "",
+            "link": ""
+          }
+        },
+        "product_card_rQJVDj": {
+          "type": "product_card",
+          "settings": {
+            "product": "",
+            "title": "",
+            "subtitle": "",
+            "price_text": "",
+            "link": ""
+          }
+        },
+        "product_card_6kFGTB": {
+          "type": "product_card",
+          "settings": {
+            "product": "",
+            "title": "",
+            "subtitle": "",
+            "price_text": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "product_card_BMJQY8",
+        "product_card_4YykBm",
+        "product_card_rQJVDj",
+        "product_card_6kFGTB"
+      ],
+      "name": "Favoris clients - Slider",
+      "settings": {
+        "title": "Our Customers'",
+        "script_title": "Favorites.",
+        "description": "<p>Your automatic watches, perfectly on time every morning. All that’s left is choosing which one to wear.</p>",
+        "view_all_label": "",
+        "view_all_url": "",
+        "promo_image": "shopify://shop_images/23aac5c3-6588-4b3a-9374-5e7e032e4985.png",
+        "promo_title": "Explore the",
+        "promo_script": "Entire Collection",
+        "promo_cta": "",
+        "promo_url": "",
+        "promo_button_style": "filled",
+        "promo_button_full_width": false,
+        "promo_button_background": "#ffffff",
+        "promo_button_text_color": "#192534",
+        "promo_button_radius": 4,
+        "overlay_color": "#000000",
+        "overlay_opacity": 15,
+        "promo_text_color": "#ffffff",
+        "show_prices": true,
+        "price_prefix": "À partir de",
+        "product_ratio": "1",
+        "background_color": "#ffffff",
+        "heading_color": "#192534",
+        "text_color": "#6e7681",
+        "line_color": "#d3cdc5",
+        "card_background": "#e6dfd5",
+        "max_width": 1200,
+        "card_gap": 10,
+        "padding_top": 70,
+        "padding_bottom": 90,
+        "padding_side": 25,
+        "title_size": 40,
+        "script_size": 50,
+        "body_size": 14,
+        "mobile_title_size": 26,
+        "mobile_script_size": 38,
+        "mobile_card_width": 60,
+        "mobile_side": 20,
+        "mobile_top": 40,
+        "mobile_bottom": 45
       }
     },
     "faqelegence_87Tkky": {
@@ -243,6 +337,7 @@
   "order": [
     "collectionbestseller_TyJxDT",
     "louisdentereviews_kj7HtW",
+    "collectionbestseller_xwdb9H",
     "faqelegence_87Tkky"
   ]
 }
