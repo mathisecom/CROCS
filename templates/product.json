@@ -28,6 +28,12 @@
             "show_taxes_notice": false
           }
         },
+        "liquid_R7GEFc": {
+          "type": "liquid",
+          "settings": {
+            "liquid": "<div class=\"ld-trust-badges\" role=\"list\" aria-label=\"Our benefits\">\n\n  <div class=\"ld-trust-badges__badge\" role=\"listitem\">\n    <svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"\n      fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\"\n      stroke-linecap=\"round\" stroke-linejoin=\"round\">\n      <path d=\"M2.5 5.5h12v11h-12z\"></path>\n      <path d=\"M14.5 9h4l3 4v3.5h-7\"></path>\n      <circle cx=\"7\" cy=\"17.5\" r=\"1.8\"></circle>\n      <circle cx=\"18\" cy=\"17.5\" r=\"1.8\"></circle>\n    </svg>\n    <span>Free Shipping</span>\n  </div>\n\n  <div class=\"ld-trust-badges__badge\" role=\"listitem\">\n    <svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"\n      fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\"\n      stroke-linecap=\"round\" stroke-linejoin=\"round\">\n      <path d=\"M3 11a9 9 0 1 1 2.5 6.2\"></path>\n      <path d=\"M3 4v7h7\"></path>\n      <path d=\"M12 7v5l3 2\"></path>\n    </svg>\n    <span>30-Day Returns</span>\n  </div>\n\n  <div class=\"ld-trust-badges__badge\" role=\"listitem\">\n    <svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"\n      fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\"\n      stroke-linecap=\"round\" stroke-linejoin=\"round\">\n      <path d=\"M12 2.5 4.5 5.5v6.2c0 4.8 3.1 8.2 7.5 10 4.4-1.8 7.5-5.2 7.5-10V5.5z\"></path>\n      <path d=\"m9 12 2.1 2.1 4.2-4.3\"></path>\n    </svg>\n    <span>2-Year Warranty</span>\n  </div>\n\n</div>\n\n<style>\n  .ld-trust-badges {\n    display: flex;\n    align-items: center;\n    gap: 7px;\n    width: max-content;\n    max-width: 100%;\n    font-family: var(--font-body-family, inherit);\n  }\n\n  .ld-trust-badges__badge {\n    display: inline-flex;\n    flex: 0 0 auto;\n    align-items: center;\n    justify-content: center;\n    gap: 6px;\n    min-height: 32px;\n    padding: 7px 10px;\n    border-radius: 5px;\n    background-color: #f2eee9;\n    color: #1c2a36;\n    font-family: inherit;\n    font-size: 13px;\n    font-weight: 500;\n    line-height: 1.2;\n    white-space: nowrap;\n    box-sizing: border-box;\n  }\n\n  .ld-trust-badges__badge svg {\n    display: block;\n    flex: 0 0 auto;\n    width: 16px;\n    height: 16px;\n  }\n\n  @media (max-width: 600px) {\n    .ld-trust-badges {\n      display: grid;\n      grid-template-columns: repeat(3, minmax(0, 1fr));\n      gap: 4px;\n      width: 100%;\n    }\n\n    .ld-trust-badges__badge {\n      min-width: 0;\n      min-height: 28px;\n      gap: 3px;\n      padding: 5px 3px;\n      font-size: clamp(8px, 2.65vw, 10.5px);\n      letter-spacing: -0.01em;\n      border-radius: 4px;\n    }\n\n    .ld-trust-badges__badge svg {\n      width: 12px;\n      height: 12px;\n    }\n  }\n</style>"
+          }
+        },
         "separator": {
           "type": "separator",
           "disabled": true,
@@ -99,6 +105,7 @@
         "title",
         "badges",
         "price",
+        "liquid_R7GEFc",
         "separator",
         "description",
         "variant_picker",
@@ -203,6 +210,88 @@
         "mobile_padding_bottom": 55
       }
     },
+    "collectionbestseller_gKcV6w": {
+      "type": "collectionbestseller",
+      "blocks": {
+        "product_card_Lz7mQE": {
+          "type": "product_card",
+          "settings": {
+            "product": "",
+            "title": "OPERA WATCH BOX",
+            "subtitle": "6 watches",
+            "price_text": "From €134.99",
+            "link": ""
+          }
+        },
+        "product_card_BfxAxq": {
+          "type": "product_card",
+          "settings": {
+            "product": "",
+            "title": "CASSIOPEIA WATCH WINDER",
+            "subtitle": "4 watches",
+            "price_text": "From €264.99",
+            "link": ""
+          }
+        },
+        "product_card_4KLYTF": {
+          "type": "product_card",
+          "settings": {
+            "product": "",
+            "title": "TRAVEL WATCH CASE",
+            "subtitle": "4 watches",
+            "price_text": "From €54.99",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "product_card_Lz7mQE",
+        "product_card_BfxAxq",
+        "product_card_4KLYTF"
+      ],
+      "name": "Favoris clients - Slider",
+      "settings": {
+        "title": "You might",
+        "script_title": "also like.",
+        "description": "",
+        "view_all_label": "",
+        "view_all_url": "",
+        "promo_title": "Discover the entire",
+        "promo_script": "collection",
+        "promo_cta": "",
+        "promo_url": "",
+        "promo_button_style": "filled",
+        "promo_button_full_width": false,
+        "promo_button_background": "#FFFFFF",
+        "promo_button_text_color": "#192534",
+        "promo_button_radius": 4,
+        "overlay_color": "#000000",
+        "overlay_opacity": 25,
+        "promo_text_color": "#FFFFFF",
+        "show_prices": true,
+        "price_prefix": "From",
+        "product_ratio": "0.8",
+        "background_color": "#FFFFFF",
+        "heading_color": "#192534",
+        "text_color": "#6E7681",
+        "line_color": "#D3CDC5",
+        "card_background": "#E6DFD5",
+        "max_width": 1120,
+        "card_gap": 10,
+        "padding_top": 70,
+        "padding_bottom": 90,
+        "padding_side": 30,
+        "title_size": 38,
+        "script_size": 47,
+        "body_size": 13,
+        "mobile_title_size": 28,
+        "mobile_script_size": 36,
+        "mobile_card_width": 62,
+        "mobile_side": 20,
+        "mobile_top": 35,
+        "mobile_bottom": 45
+      }
+    },
     "faqelegence_PV8eyN": {
       "type": "FAQELEGENCE",
       "blocks": {
@@ -291,6 +380,7 @@
     "main",
     "related-products",
     "louisdentereviews_wYiRjQ",
+    "collectionbestseller_gKcV6w",
     "faqelegence_PV8eyN"
   ]
 }
