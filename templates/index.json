@@ -103,6 +103,59 @@
         "mobile_bottom": 45
       }
     },
+    "louisdentereviews_kj7HtW": {
+      "type": "louisdentereviews",
+      "blocks": {
+        "review_FHckHH": {
+          "type": "review",
+          "settings": {
+            "heading": "A Pleasant Surprise",
+            "quote": "Beautifully finished, compact, and elegant. The watch stays securely in place and well protected, making it perfect for travelling or simply storing it at home. The quality is excellent for the price, and delivery was smooth and hassle-free. Highly recommended!",
+            "author": "Niel C.",
+            "verified": true,
+            "rating": "5",
+            "product": "",
+            "product_title": "",
+            "product_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "review_FHckHH"
+      ],
+      "name": "Louis Dante - Reviews",
+      "settings": {
+        "background_position": "center center",
+        "background_blur": 4,
+        "overlay_color": "#2B211B",
+        "overlay_opacity": 35,
+        "eyebrow": "Rated 5.0/5 by our customers",
+        "show_top_stars": true,
+        "title": "They chose",
+        "script_title": "Louis Dante.",
+        "title_color": "#FFFFFF",
+        "title_size": 43,
+        "script_size": 63,
+        "card_background": "#F5F1EC",
+        "card_text_color": "#17283A",
+        "card_muted_color": "#6E7480",
+        "stars_color": "#000000",
+        "show_review_stars": true,
+        "card_width": 500,
+        "card_padding": 36,
+        "card_radius": 5,
+        "quote_size": 18,
+        "desktop_height": 590,
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "mobile_height": 620,
+        "mobile_title_size": 32,
+        "mobile_script_size": 44,
+        "mobile_quote_size": 16,
+        "mobile_padding_top": 20,
+        "mobile_padding_bottom": 20
+      }
+    },
     "faqelegence_87Tkky": {
       "type": "FAQELEGENCE",
       "blocks": {
@@ -189,6 +242,7 @@
   },
   "order": [
     "collectionbestseller_TyJxDT",
+    "louisdentereviews_kj7HtW",
     "faqelegence_87Tkky"
   ]
 }
