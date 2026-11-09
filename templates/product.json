@@ -63,6 +63,12 @@
           "type": "quantity_selector",
           "settings": {}
         },
+        "liquid_JKQEQc": {
+          "type": "liquid",
+          "settings": {
+            "liquid": ""
+          }
+        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
@@ -110,6 +116,7 @@
         "description",
         "variant_picker",
         "quantity_selector",
+        "liquid_JKQEQc",
         "buy_buttons",
         "liquid_WBNLQK",
         "collapsible_text_UghKxP",
