@@ -103,6 +103,93 @@
         "mobile_bottom": 45
       }
     },
+    "louisdantecollection_7M7AyM": {
+      "type": "louisdantecollection",
+      "blocks": {
+        "collection_card_tMhyDw": {
+          "type": "collection_card",
+          "settings": {
+            "collection": "",
+            "link": "",
+            "image_alt": "",
+            "image_position": "center center",
+            "script_text": "Explore our",
+            "title": "WATCH WINDERS",
+            "show_button": true,
+            "button_text": "DISCOVER",
+            "button_visibility": "mobile",
+            "button_style": "text"
+          }
+        },
+        "collection_card_PGcp9f": {
+          "type": "collection_card",
+          "settings": {
+            "collection": "",
+            "link": "",
+            "image_alt": "",
+            "image_position": "center center",
+            "script_text": "Explore our",
+            "title": "WATCH BOXES",
+            "show_button": true,
+            "button_text": "DISCOVER",
+            "button_visibility": "mobile",
+            "button_style": "text"
+          }
+        },
+        "collection_card_38qrNi": {
+          "type": "collection_card",
+          "settings": {
+            "collection": "",
+            "link": "",
+            "image_alt": "",
+            "image_position": "center center",
+            "script_text": "Explore our",
+            "title": "TRAVEL CASES",
+            "show_button": true,
+            "button_text": "DISCOVER",
+            "button_visibility": "mobile",
+            "button_style": "text"
+          }
+        }
+      },
+      "block_order": [
+        "collection_card_tMhyDw",
+        "collection_card_PGcp9f",
+        "collection_card_38qrNi"
+      ],
+      "name": "Louis Dante Collections",
+      "settings": {
+        "eyebrow": "OUR COLLECTIONS",
+        "heading_before": "Three collections, one standard for your",
+        "heading_script": "timepieces.",
+        "description": "Watch winders, watch boxes and travel cases — a home for every timepiece, wherever life takes you.",
+        "background_color": "#FAF9F7",
+        "text_color": "#1B2632",
+        "muted_color": "#767C83",
+        "card_text_color": "#FFFFFF",
+        "button_background": "#FFFFFF",
+        "button_text_color": "#1B2632",
+        "image_overlay": 40,
+        "max_width": 2200,
+        "card_gap": 8,
+        "desktop_side_padding": 8,
+        "desktop_ratio": "4/5",
+        "top_padding": 16,
+        "bottom_padding": 24,
+        "heading_size": 38,
+        "card_title_size": 42,
+        "script_size": 54,
+        "card_radius": 4,
+        "mobile_card_width": 83,
+        "mobile_side_padding": 8,
+        "mobile_ratio": "4/5",
+        "mobile_top_padding": 40,
+        "mobile_bottom_padding": 40,
+        "mobile_heading_size": 29,
+        "mobile_card_title_size": 33,
+        "mobile_script_size": 50
+      }
+    },
     "louisdentereviews_kj7HtW": {
       "type": "louisdentereviews",
       "blocks": {
@@ -337,6 +424,7 @@
   },
   "order": [
     "collectionbestseller_TyJxDT",
+    "louisdantecollection_7M7AyM",
     "louisdentereviews_kj7HtW",
     "collectionbestseller_xwdb9H",
     "faqelegence_87Tkky"
