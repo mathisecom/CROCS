@@ -15,7 +15,7 @@
         "product_card_PXawfJ": {
           "type": "product_card",
           "settings": {
-            "product": "leather-automatic-watch-winder-mechanical-watch-household",
+            "product": "",
             "title": "",
             "subtitle": "",
             "price_text": "",
@@ -25,7 +25,7 @@
         "product_card_GfXgWm": {
           "type": "product_card",
           "settings": {
-            "product": "electric-motor-box-watch-box-wooden-mechanical-watch-table-shaker",
+            "product": "",
             "title": "",
             "subtitle": "",
             "price_text": "",
@@ -35,7 +35,7 @@
         "product_card_fXMiLJ": {
           "type": "product_card",
           "settings": {
-            "product": "interior-watch-storage-box-automatic-watch-winder",
+            "product": "",
             "title": "",
             "subtitle": "",
             "price_text": "",
@@ -45,7 +45,7 @@
         "product_card_KfxiNr": {
           "type": "product_card",
           "settings": {
-            "product": "carbon-fiber-pattern-single-watch-winder-for-automatic-mechanical-watches",
+            "product": "",
             "title": "",
             "subtitle": "",
             "price_text": "",
@@ -91,15 +91,15 @@
         "card_gap": 10,
         "padding_top": 70,
         "padding_bottom": 90,
-        "padding_side": 30,
+        "padding_side": 25,
         "title_size": 40,
         "script_size": 50,
         "body_size": 14,
         "mobile_title_size": 26,
         "mobile_script_size": 38,
-        "mobile_card_width": 62,
+        "mobile_card_width": 60,
         "mobile_side": 20,
-        "mobile_top": 35,
+        "mobile_top": 25,
         "mobile_bottom": 45
       }
     },
