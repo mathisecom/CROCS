@@ -141,10 +141,94 @@
         "product_card_background": "",
         "product_card_text_color": ""
       }
+    },
+    "faqelegence_PV8eyN": {
+      "type": "FAQELEGENCE",
+      "blocks": {
+        "question_tW3kGB": {
+          "type": "question",
+          "settings": {
+            "heading": "Will a watch winder work with my watch?",
+            "answer": "<p>Watch winders are intended for compatible automatic watches. Check your movement manufacturer's guidance, including rotation direction and turns per day, alongside the specifications of your chosen winder.</p>",
+            "open_on_load": false
+          }
+        },
+        "question_MbbqqH": {
+          "type": "question",
+          "settings": {
+            "heading": "How many watch spaces should I choose?",
+            "answer": "<p>Consider the automatic watches you rotate between, the space available at home and whether your collection may grow. Compare each model's capacity, cushion fit and dimensions before ordering.</p>",
+            "open_on_load": false
+          }
+        },
+        "question_URgNm6": {
+          "type": "question",
+          "settings": {
+            "heading": "Which rotation settings should I use?",
+            "answer": "<p>Settings depend on the movement inside your watch. Follow the watch manufacturer's recommendations and select a winder that supports the required rotation direction and turns per day.</p>",
+            "open_on_load": false
+          }
+        },
+        "question_cXddBp": {
+          "type": "question",
+          "settings": {
+            "heading": "Can I keep my watch winder in the bedroom?",
+            "answer": "<p>Operating sound varies by model and environment. Review the product's motor information and contact us if quiet operation is a priority for you.</p>",
+            "open_on_load": false
+          }
+        },
+        "question_UXMBg3": {
+          "type": "question",
+          "settings": {
+            "heading": "Where can I find shipping and return information?",
+            "answer": "<p>Delivery and return terms are available in the policy links below. Contact us before ordering if you need additional help.</p>",
+            "open_on_load": false
+          }
+        }
+      },
+      "block_order": [
+        "question_tW3kGB",
+        "question_MbbqqH",
+        "question_URgNm6",
+        "question_cXddBp",
+        "question_UXMBg3"
+      ],
+      "name": "FAQ - Conseils élégants",
+      "settings": {
+        "eyebrow": "AT YOUR SERVICE",
+        "title": "A little guidance",
+        "script_title": "before you choose.",
+        "description": "<p>Tell us about your watch, your collection and what you have in mind.</p>",
+        "button_label": "CONTACT US",
+        "button_link": "",
+        "background_color": "#F1EDE6",
+        "heading_color": "#152336",
+        "text_color": "#697482",
+        "muted_color": "#697482",
+        "line_color": "#D6D0C7",
+        "max_width": 1600,
+        "left_column_width": 39,
+        "column_gap": 70,
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "padding_side": 50,
+        "title_size": 44,
+        "script_size": 48,
+        "body_size": 14,
+        "question_size": 13,
+        "answer_size": 14,
+        "row_padding": 24,
+        "mobile_title_size": 34,
+        "mobile_script_size": 42,
+        "mobile_padding_top": 50,
+        "mobile_padding_bottom": 50,
+        "mobile_padding_side": 20
+      }
     }
   },
   "order": [
     "main",
-    "related-products"
+    "related-products",
+    "faqelegence_PV8eyN"
   ]
 }
