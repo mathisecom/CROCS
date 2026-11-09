@@ -1,0 +1,522 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Luxurious+Script&display=swap" rel="stylesheet">
+
+<section
+  id="ld-collections-{{ section.id }}"
+  class="ld-collections"
+  style="
+    --ld-background: {{ section.settings.background_color }};
+    --ld-text: {{ section.settings.text_color }};
+    --ld-muted: {{ section.settings.muted_color }};
+    --ld-card-text: {{ section.settings.card_text_color }};
+    --ld-button-bg: {{ section.settings.button_background }};
+    --ld-button-text: {{ section.settings.button_text_color }};
+    --ld-overlay: {{ section.settings.image_overlay | divided_by: 100.0 }};
+    --ld-container: {{ section.settings.max_width }}px;
+    --ld-gap: {{ section.settings.card_gap }}px;
+    --ld-side-desktop: {{ section.settings.desktop_side_padding }}px;
+    --ld-side-mobile: {{ section.settings.mobile_side_padding }}px;
+    --ld-top-desktop: {{ section.settings.top_padding }}px;
+    --ld-bottom-desktop: {{ section.settings.bottom_padding }}px;
+    --ld-top-mobile: {{ section.settings.mobile_top_padding }}px;
+    --ld-bottom-mobile: {{ section.settings.mobile_bottom_padding }}px;
+    --ld-heading-desktop: {{ section.settings.heading_size }}px;
+    --ld-heading-mobile: {{ section.settings.mobile_heading_size }}px;
+    --ld-card-title-desktop: {{ section.settings.card_title_size }}px;
+    --ld-card-title-mobile: {{ section.settings.mobile_card_title_size }}px;
+    --ld-script-desktop: {{ section.settings.script_size }}px;
+    --ld-script-mobile: {{ section.settings.mobile_script_size }}px;
+    --ld-ratio-desktop: {{ section.settings.desktop_ratio }};
+    --ld-ratio-mobile: {{ section.settings.mobile_ratio }};
+    --ld-mobile-width: {{ section.settings.mobile_card_width }}%;
+    --ld-radius: {{ section.settings.card_radius }}px;
+  "
+>
+  <div class="ld-collections__inner">
+    <header class="ld-collections__header">
+      {% if section.settings.eyebrow != blank %}
+        <p class="ld-collections__eyebrow">{{ section.settings.eyebrow | escape }}</p>
+      {% endif %}
+
+      {% if section.settings.heading_before != blank or section.settings.heading_script != blank %}
+        <h2 class="ld-collections__heading">
+          {{ section.settings.heading_before | escape }}
+          {% if section.settings.heading_script != blank %}
+            <span class="ld-collections__heading-script">{{ section.settings.heading_script | escape }}</span>
+          {% endif %}
+        </h2>
+      {% endif %}
+
+      {% if section.settings.description != blank %}
+        <p class="ld-collections__description">{{ section.settings.description | escape }}</p>
+      {% endif %}
+    </header>
+
+    {% assign responsive_sizes = '(max-width: 749px) ' | append: section.settings.mobile_card_width | append: 'vw, 33vw' %}
+    <div class="ld-collections__track" role="region" aria-label="{{ section.settings.eyebrow | default: 'Watch collections' | escape }}" tabindex="0">
+      {% for block in section.blocks %}
+        {% liquid
+          assign card = block.settings
+          assign card_image = card.image_desktop
+          if card_image == blank and card.collection != blank
+            assign card_image = card.collection.image
+          endif
+          if card_image == blank
+            assign card_image = card.image_mobile
+          endif
+
+          assign card_link = card.link
+          if card_link == blank and card.collection != blank
+            assign card_link = card.collection.url
+          endif
+
+          assign card_image_alt = card.image_alt
+          if card_image_alt == blank
+            assign card_image_alt = card.title
+          endif
+
+          assign image_loading = 'lazy'
+          assign image_priority = 'auto'
+          if forloop.first
+            assign image_loading = 'eager'
+            assign image_priority = 'high'
+          endif
+        %}
+
+        {% if card_link != blank %}
+          <a
+            href="{{ card_link | escape }}"
+            class="ld-collections__card"
+            style="--ld-image-position: {{ card.image_position }};"
+            {{ block.shopify_attributes }}
+          >
+        {% else %}
+          <div
+            class="ld-collections__card"
+            style="--ld-image-position: {{ card.image_position }};"
+            {{ block.shopify_attributes }}
+          >
+        {% endif %}
+
+          {% if card_image != blank %}
+            <picture class="ld-collections__picture">
+              {% if card.image_mobile != blank %}
+                <source
+                  media="(max-width: 749px)"
+                  srcset="{{ card.image_mobile | image_url: width: 400 }} 400w, {{ card.image_mobile | image_url: width: 700 }} 700w, {{ card.image_mobile | image_url: width: 1000 }} 1000w"
+                  sizes="{{ section.settings.mobile_card_width }}vw"
+                >
+              {% endif %}
+              {{ card_image | image_url: width: 1600 | image_tag: loading: image_loading, fetchpriority: image_priority, widths: '400, 600, 800, 1000, 1200, 1600', sizes: responsive_sizes, class: 'ld-collections__image', alt: card_image_alt }}
+            </picture>
+          {% else %}
+            {{ 'lifestyle-1' | placeholder_svg_tag: 'ld-collections__placeholder' }}
+          {% endif %}
+
+          <span class="ld-collections__shade" aria-hidden="true"></span>
+
+          <div class="ld-collections__card-content">
+            {% if card.script_text != blank %}
+              <span class="ld-collections__card-script">{{ card.script_text | escape }}</span>
+            {% endif %}
+
+            {% if card.title != blank %}
+              <h3 class="ld-collections__card-title">{{ card.title | escape }}</h3>
+            {% endif %}
+
+            {% if card.show_button and card.button_text != blank and card_link != blank %}
+              <span class="ld-collections__cta ld-collections__cta--{{ card.button_visibility }} ld-collections__cta--{{ card.button_style }}">
+                {{ card.button_text | escape }}
+              </span>
+            {% endif %}
+          </div>
+
+        {% if card_link != blank %}
+          </a>
+        {% else %}
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% stylesheet %}
+  .ld-collections {
+    width: 100%;
+    padding-block: var(--ld-top-desktop) var(--ld-bottom-desktop);
+    background: var(--ld-background);
+    color: var(--ld-text);
+    font-family: var(--font-body-family, inherit);
+    box-sizing: border-box;
+  }
+
+  .ld-collections *,
+  .ld-collections *::before,
+  .ld-collections *::after {
+    box-sizing: border-box;
+  }
+
+  .ld-collections__inner {
+    width: 100%;
+    max-width: var(--ld-container);
+    margin: 0 auto;
+  }
+
+  .ld-collections__header {
+    max-width: 1100px;
+    margin: 0 auto 20px;
+    padding: 0 18px;
+    text-align: center;
+  }
+
+  .ld-collections__eyebrow {
+    margin: 0 0 13px;
+    font: inherit;
+    font-size: 10px;
+    font-weight: 600;
+    line-height: 1.5;
+    letter-spacing: .19em;
+    text-transform: uppercase;
+  }
+
+  .ld-collections__heading {
+    margin: 0;
+    color: var(--ld-text);
+    font-family: var(--font-heading-family, inherit);
+    font-size: var(--ld-heading-desktop);
+    font-weight: 400;
+    letter-spacing: -.035em;
+    line-height: 1.2;
+  }
+
+  .ld-collections__heading-script,
+  .ld-collections__card-script {
+    font-family: 'Luxurious Script', cursive;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0;
+    text-transform: none;
+  }
+
+  .ld-collections__heading-script {
+    display: inline-block;
+    padding-inline: .03em;
+    font-size: 1.25em;
+    line-height: .8;
+  }
+
+  .ld-collections__description {
+    max-width: 800px;
+    margin: 12px auto 0;
+    color: var(--ld-muted);
+    font-family: var(--font-body-family, inherit);
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.55;
+  }
+
+  .ld-collections__track {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--ld-gap);
+    padding-inline: var(--ld-side-desktop);
+  }
+
+  .ld-collections__card {
+    position: relative;
+    display: block;
+    min-width: 0;
+    overflow: hidden;
+    isolation: isolate;
+    border-radius: var(--ld-radius);
+    aspect-ratio: var(--ld-ratio-desktop);
+    background: #b9a99b;
+    color: var(--ld-card-text);
+    text-decoration: none;
+  }
+
+  .ld-collections__card:focus-visible {
+    outline: 3px solid var(--ld-text);
+    outline-offset: 3px;
+  }
+
+  .ld-collections__picture,
+  .ld-collections__image,
+  .ld-collections__placeholder,
+  .ld-collections__shade {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .ld-collections__picture { display: block; }
+
+  .ld-collections__image {
+    display: block;
+    object-fit: cover;
+    object-position: var(--ld-image-position, center center);
+    transition: transform .55s ease;
+  }
+
+  .ld-collections__placeholder {
+    display: block;
+    object-fit: cover;
+  }
+
+  .ld-collections__shade {
+    z-index: 1;
+    background: #000;
+    opacity: var(--ld-overlay);
+    pointer-events: none;
+    transition: opacity .3s ease;
+  }
+
+  .ld-collections__card-content {
+    position: absolute;
+    z-index: 2;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 22px 14px;
+    text-align: center;
+    color: var(--ld-card-text);
+    text-shadow: 0 1px 9px rgb(0 0 0 / 23%);
+  }
+
+  .ld-collections__card-script {
+    display: block;
+    margin-bottom: -5px;
+    font-size: var(--ld-script-desktop);
+    line-height: .9;
+  }
+
+  .ld-collections__card-title {
+    margin: 0;
+    color: inherit;
+    font-family: var(--font-heading-family, inherit);
+    font-size: var(--ld-card-title-desktop);
+    font-weight: 400;
+    line-height: 1.07;
+    letter-spacing: -.03em;
+    text-transform: uppercase;
+  }
+
+  .ld-collections__cta {
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    margin-top: 24px;
+    font-family: var(--font-body-family, inherit);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: .11em;
+    line-height: 1.2;
+    text-transform: uppercase;
+    text-shadow: none;
+  }
+
+  .ld-collections__cta--mobile,
+  .ld-collections__cta--none { display: none; }
+
+  .ld-collections__cta--all { display: inline-flex; }
+
+  .ld-collections__cta--text {
+    padding: 4px 0 7px;
+    border-bottom: 1px solid currentColor;
+    color: inherit;
+  }
+
+  .ld-collections__cta--solid {
+    padding: 13px 22px;
+    border: 1px solid var(--ld-button-bg);
+    border-radius: 2px;
+    background: var(--ld-button-bg);
+    color: var(--ld-button-text);
+  }
+
+  .ld-collections__cta--outline {
+    padding: 13px 22px;
+    border: 1px solid currentColor;
+    border-radius: 2px;
+    color: inherit;
+  }
+
+  @media (hover: hover) and (prefers-reduced-motion: no-preference) {
+    .ld-collections__card:hover .ld-collections__image { transform: scale(1.045); }
+    .ld-collections__card:hover .ld-collections__shade { opacity: calc(var(--ld-overlay) + .07); }
+  }
+
+  @media (max-width: 749px) {
+    .ld-collections {
+      padding-block: var(--ld-top-mobile) var(--ld-bottom-mobile);
+    }
+
+    .ld-collections__header {
+      max-width: 510px;
+      margin-bottom: 25px;
+      padding: 0 19px;
+    }
+
+    .ld-collections__eyebrow {
+      margin-bottom: 12px;
+      font-size: 10px;
+      letter-spacing: .17em;
+    }
+
+    .ld-collections__heading {
+      font-size: var(--ld-heading-mobile);
+      line-height: 1.22;
+      letter-spacing: -.035em;
+    }
+
+    .ld-collections__heading-script { font-size: 1.25em; }
+
+    .ld-collections__description {
+      margin-top: 12px;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .ld-collections__track {
+      grid-template-columns: none;
+      grid-auto-flow: column;
+      grid-auto-columns: var(--ld-mobile-width);
+      gap: var(--ld-gap);
+      padding: 0 var(--ld-side-mobile) 7px;
+      overflow-x: auto;
+      overscroll-behavior-inline: contain;
+      scroll-snap-type: x mandatory;
+      scroll-padding-inline: var(--ld-side-mobile);
+      scrollbar-width: none;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .ld-collections__track::-webkit-scrollbar { display: none; }
+
+    .ld-collections__card {
+      aspect-ratio: var(--ld-ratio-mobile);
+      scroll-snap-align: start;
+    }
+
+    .ld-collections__card-content { padding: 18px 12px; }
+
+    .ld-collections__card-script {
+      margin-bottom: -3px;
+      font-size: var(--ld-script-mobile);
+    }
+
+    .ld-collections__card-title { font-size: var(--ld-card-title-mobile); }
+
+    .ld-collections__cta { margin-top: 20px; }
+
+    .ld-collections__cta--mobile { display: inline-flex; }
+    .ld-collections__cta--none { display: none; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .ld-collections__image,
+    .ld-collections__shade { transition: none; }
+    .ld-collections__track { scroll-behavior: auto; }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Louis Dante Collections",
+  "settings": [
+    { "type": "header", "content": "Text" },
+    { "type": "text", "id": "eyebrow", "label": "Small heading", "default": "OUR COLLECTIONS" },
+    { "type": "text", "id": "heading_before", "label": "Main heading", "default": "Three collections, one standard for your" },
+    { "type": "text", "id": "heading_script", "label": "Script word (Luxurious Script)", "default": "timepieces." },
+    { "type": "textarea", "id": "description", "label": "Description", "default": "Watch winders, watch boxes and travel cases — a home for every timepiece, wherever life takes you." },
+    { "type": "header", "content": "Colors" },
+    { "type": "color", "id": "background_color", "label": "Section background", "default": "#FAF9F7" },
+    { "type": "color", "id": "text_color", "label": "Heading color", "default": "#1B2632" },
+    { "type": "color", "id": "muted_color", "label": "Description color", "default": "#767C83" },
+    { "type": "color", "id": "card_text_color", "label": "Text over images", "default": "#FFFFFF" },
+    { "type": "color", "id": "button_background", "label": "Filled button background", "default": "#FFFFFF" },
+    { "type": "color", "id": "button_text_color", "label": "Filled button text", "default": "#1B2632" },
+    { "type": "range", "id": "image_overlay", "label": "Image darkness", "min": 0, "max": 80, "step": 5, "unit": "%", "default": 40 },
+    { "type": "header", "content": "Desktop layout" },
+    { "type": "range", "id": "max_width", "label": "Maximum width", "min": 1000, "max": 2400, "step": 100, "unit": "px", "default": 2200 },
+    { "type": "range", "id": "card_gap", "label": "Space between cards", "min": 4, "max": 28, "step": 2, "unit": "px", "default": 8 },
+    { "type": "range", "id": "desktop_side_padding", "label": "Side padding", "min": 0, "max": 80, "step": 4, "unit": "px", "default": 8 },
+    { "type": "select", "id": "desktop_ratio", "label": "Card ratio", "options": [
+      { "value": "3/4", "label": "3:4 portrait" },
+      { "value": "4/5", "label": "4:5 portrait" },
+      { "value": "5/6", "label": "5:6 portrait" },
+      { "value": "1/1", "label": "1:1 square" }
+    ], "default": "4/5" },
+    { "type": "range", "id": "top_padding", "label": "Top padding", "min": 0, "max": 120, "step": 4, "unit": "px", "default": 16 },
+    { "type": "range", "id": "bottom_padding", "label": "Bottom padding", "min": 0, "max": 120, "step": 4, "unit": "px", "default": 24 },
+    { "type": "range", "id": "heading_size", "label": "Main title size", "min": 26, "max": 60, "step": 2, "unit": "px", "default": 38 },
+    { "type": "range", "id": "card_title_size", "label": "Card title size", "min": 24, "max": 56, "step": 2, "unit": "px", "default": 42 },
+    { "type": "range", "id": "script_size", "label": "Card script size", "min": 24, "max": 80, "step": 2, "unit": "px", "default": 54 },
+    { "type": "range", "id": "card_radius", "label": "Card corners", "min": 0, "max": 24, "step": 1, "unit": "px", "default": 4 },
+    { "type": "header", "content": "Mobile layout" },
+    { "type": "range", "id": "mobile_card_width", "label": "Card width (next card preview)", "min": 72, "max": 100, "step": 1, "unit": "%", "default": 83 },
+    { "type": "range", "id": "mobile_side_padding", "label": "Side padding", "min": 0, "max": 40, "step": 2, "unit": "px", "default": 8 },
+    { "type": "select", "id": "mobile_ratio", "label": "Card ratio", "options": [
+      { "value": "3/4", "label": "3:4 portrait" },
+      { "value": "4/5", "label": "4:5 portrait" },
+      { "value": "5/6", "label": "5:6 portrait" },
+      { "value": "1/1", "label": "1:1 square" }
+    ], "default": "4/5" },
+    { "type": "range", "id": "mobile_top_padding", "label": "Top padding", "min": 0, "max": 120, "step": 4, "unit": "px", "default": 40 },
+    { "type": "range", "id": "mobile_bottom_padding", "label": "Bottom padding", "min": 0, "max": 120, "step": 4, "unit": "px", "default": 40 },
+    { "type": "range", "id": "mobile_heading_size", "label": "Main title size", "min": 22, "max": 40, "step": 1, "unit": "px", "default": 29 },
+    { "type": "range", "id": "mobile_card_title_size", "label": "Card title size", "min": 22, "max": 44, "step": 1, "unit": "px", "default": 33 },
+    { "type": "range", "id": "mobile_script_size", "label": "Card script size", "min": 24, "max": 70, "step": 2, "unit": "px", "default": 50 }
+  ],
+  "blocks": [
+    {
+      "type": "collection_card",
+      "name": "Collection card",
+      "settings": [
+        { "type": "collection", "id": "collection", "label": "Linked collection" },
+        { "type": "url", "id": "link", "label": "Custom link (overrides collection)" },
+        { "type": "image_picker", "id": "image_desktop", "label": "Desktop image" },
+        { "type": "image_picker", "id": "image_mobile", "label": "Mobile image (optional)" },
+        { "type": "text", "id": "image_alt", "label": "Image accessibility text" },
+        { "type": "select", "id": "image_position", "label": "Image position", "options": [
+          { "value": "center center", "label": "Center" },
+          { "value": "center top", "label": "Top" },
+          { "value": "center bottom", "label": "Bottom" },
+          { "value": "left center", "label": "Left" },
+          { "value": "right center", "label": "Right" }
+        ], "default": "center center" },
+        { "type": "text", "id": "script_text", "label": "Script text (Luxurious Script)", "default": "Explore our" },
+        { "type": "text", "id": "title", "label": "Collection title", "default": "WATCH WINDERS" },
+        { "type": "checkbox", "id": "show_button", "label": "Show button", "default": true },
+        { "type": "text", "id": "button_text", "label": "Button label", "default": "DISCOVER" },
+        { "type": "select", "id": "button_visibility", "label": "Button visibility", "options": [
+          { "value": "mobile", "label": "Mobile only" },
+          { "value": "all", "label": "Desktop and mobile" },
+          { "value": "none", "label": "Hidden" }
+        ], "default": "mobile" },
+        { "type": "select", "id": "button_style", "label": "Button appearance", "options": [
+          { "value": "text", "label": "Text with underline" },
+          { "value": "solid", "label": "Filled button" },
+          { "value": "outline", "label": "Outlined button" }
+        ], "default": "text" }
+      ]
+    }
+  ],
+  "max_blocks": 6,
+  "presets": [
+    {
+      "name": "Louis Dante Collections",
+      "blocks": [
+        { "type": "collection_card", "settings": { "title": "WATCH WINDERS", "script_text": "Explore our" } },
+        { "type": "collection_card", "settings": { "title": "WATCH BOXES", "script_text": "Explore our" } },
+        { "type": "collection_card", "settings": { "title": "TRAVEL CASES", "script_text": "Explore our" } }
+      ]
+    }
+  ]
+}
+{% endschema %}
