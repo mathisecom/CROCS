@@ -125,9 +125,9 @@
       ],
       "name": "Louis Dante - Reviews",
       "settings": {
-        "background_image": "shopify://shop_images/reviewfond.webp",
+        "background_image": "shopify://shop_images/d60a29c0-98ae-4aa2-8302-bdd86ac234c7.png",
         "background_position": "center center",
-        "background_blur": 3,
+        "background_blur": 4,
         "overlay_color": "#2b211b",
         "overlay_opacity": 20,
         "eyebrow": "Rated 5.0/5 by our customers",
