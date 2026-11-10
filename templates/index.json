@@ -149,6 +149,16 @@
     "collectionbestseller_TyJxDT": {
       "type": "collectionbestseller",
       "blocks": {
+        "product_card_KfxiNr": {
+          "type": "product_card",
+          "settings": {
+            "product": "household-anti-magnetic-vertical-electric-rotary-table-shaker",
+            "title": "",
+            "subtitle": "",
+            "price_text": "",
+            "link": ""
+          }
+        },
         "product_card_PXawfJ": {
           "type": "product_card",
           "settings": {
@@ -162,7 +172,7 @@
         "product_card_GfXgWm": {
           "type": "product_card",
           "settings": {
-            "product": "",
+            "product": "mini-single-watch-winder-watch-rotator-with-five-speed-settings-and-a-type-c-port",
             "title": "",
             "subtitle": "",
             "price_text": "",
@@ -172,17 +182,7 @@
         "product_card_fXMiLJ": {
           "type": "product_card",
           "settings": {
-            "product": "",
-            "title": "",
-            "subtitle": "",
-            "price_text": "",
-            "link": ""
-          }
-        },
-        "product_card_KfxiNr": {
-          "type": "product_card",
-          "settings": {
-            "product": "",
+            "product": "dual-position-electric-watch-winder-box",
             "title": "",
             "subtitle": "",
             "price_text": "",
@@ -191,10 +191,10 @@
         }
       },
       "block_order": [
+        "product_card_KfxiNr",
         "product_card_PXawfJ",
         "product_card_GfXgWm",
-        "product_card_fXMiLJ",
-        "product_card_KfxiNr"
+        "product_card_fXMiLJ"
       ],
       "name": "Favoris clients - Slider",
       "settings": {
