@@ -225,7 +225,7 @@
         "line_color": "#d3cdc5",
         "card_background": "#e6dfd5",
         "max_width": 1200,
-        "card_gap": 10,
+        "card_gap": 24,
         "padding_top": 70,
         "padding_bottom": 90,
         "padding_side": 25,
@@ -385,6 +385,16 @@
     "collectionbestseller_xwdb9H": {
       "type": "collectionbestseller",
       "blocks": {
+        "product_card_6kFGTB": {
+          "type": "product_card",
+          "settings": {
+            "product": "automatic-winding-shaking-watch-device-transducer-mechanical-watch-winding-watch-device",
+            "title": "",
+            "subtitle": "",
+            "price_text": "",
+            "link": ""
+          }
+        },
         "product_card_BMJQY8": {
           "type": "product_card",
           "settings": {
@@ -414,23 +424,13 @@
             "price_text": "",
             "link": ""
           }
-        },
-        "product_card_6kFGTB": {
-          "type": "product_card",
-          "settings": {
-            "product": "automatic-winding-shaking-watch-device-transducer-mechanical-watch-winding-watch-device",
-            "title": "",
-            "subtitle": "",
-            "price_text": "",
-            "link": ""
-          }
         }
       },
       "block_order": [
+        "product_card_6kFGTB",
         "product_card_BMJQY8",
         "product_card_4YykBm",
-        "product_card_rQJVDj",
-        "product_card_6kFGTB"
+        "product_card_rQJVDj"
       ],
       "name": "Favoris clients - Slider",
       "settings": {
@@ -461,7 +461,7 @@
         "line_color": "#d3cdc5",
         "card_background": "#e6dfd5",
         "max_width": 1200,
-        "card_gap": 10,
+        "card_gap": 24,
         "padding_top": 70,
         "padding_bottom": 90,
         "padding_side": 25,
