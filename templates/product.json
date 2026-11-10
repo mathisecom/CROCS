@@ -178,24 +178,28 @@
         "image_yj7Mx6": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/Nouveau_projet_-_2026-11-10T113717.267.png",
             "url": ""
           }
         },
         "image_Y9Lhhb": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/Nouveau_projet_-_2026-11-10T113730.644.png",
             "url": ""
           }
         },
         "image_EaUm3j": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/Nouveau_projet_-_2026-11-10T113742.137.png",
             "url": ""
           }
         },
         "image_AyyYi7": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/Nouveau_projet_-_2026-11-10T113749.817.png",
             "url": ""
           }
         }
@@ -216,14 +220,14 @@
         "heading_size": 18,
         "heading_size_mobile": 18,
         "heading_height": 130,
-        "scrolling_velocity": 30,
-        "scrolling_velocity_mobile": 30,
+        "scrolling_velocity": 16,
+        "scrolling_velocity_mobile": 16,
         "scrolling_direction": "left",
         "pause_hover": false,
         "scrolling_gap": 70,
         "scrolling_gap_mobile": 30,
-        "card_width_desktop": 130,
-        "card_width_mobile": 100,
+        "card_width_desktop": 140,
+        "card_width_mobile": 190,
         "heading_color": "#121212",
         "layout_bg_color": "#FFFFFF",
         "layout_border_color": "#121212",
