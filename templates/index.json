@@ -14,6 +14,7 @@
       "name": "Louis Dante Hero",
       "settings": {
         "image_desktop": "shopify://shop_images/WOLF-Earth-Homepage-Banners4.webp",
+        "image_mobile": "shopify://shop_images/5a81cb14-1e1a-4ed9-b963-a51370d982e3.png",
         "image_alt": "Luxury watch winder",
         "image_x_desktop": 70,
         "image_y_desktop": 50,
