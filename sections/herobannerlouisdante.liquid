@@ -1,0 +1,503 @@
+{% liquid
+  assign hero = section.settings
+  assign hero_image = hero.image_desktop | default: hero.image_mobile
+  assign rating_fill = hero.rating | times: 20
+  assign hero_url = hero.button_link | default: routes.all_products_collection_url
+%}
+
+<link href="https://fonts.googleapis.com/css2?family=Luxurious+Script&amp;display=swap" rel="stylesheet">
+
+<section
+  id="LouisDanteHero-{{ section.id }}"
+  class="ld-hero ld-hero--align-{{ hero.align_desktop }} ld-hero--mobile-align-{{ hero.align_mobile }} ld-hero--vertical-{{ hero.vertical_desktop }} ld-hero--mobile-vertical-{{ hero.vertical_mobile }} ld-hero--button-{{ hero.button_style }}{% if hero.actions_stacked %} ld-hero--actions-stacked{% endif %}{% if hero.button_full_mobile %} ld-hero--button-full-mobile{% endif %}{% if hero.description_first_mobile %} ld-hero--description-first-mobile{% endif %}"
+  style="
+    --ld-height-desktop: {{ hero.height_desktop }}px;
+    --ld-height-mobile: {{ hero.height_mobile }}px;
+    --ld-padding-x-desktop: {{ hero.padding_x_desktop }}px;
+    --ld-padding-y-desktop: {{ hero.padding_y_desktop }}px;
+    --ld-padding-x-mobile: {{ hero.padding_x_mobile }}px;
+    --ld-padding-y-mobile: {{ hero.padding_y_mobile }}px;
+    --ld-content-width: {{ hero.content_width }}px;
+    --ld-title-size-desktop: {{ hero.title_size_desktop }}px;
+    --ld-title-size-mobile: {{ hero.title_size_mobile }}px;
+    --ld-script-size-desktop: {{ hero.script_size_desktop }}px;
+    --ld-script-size-mobile: {{ hero.script_size_mobile }}px;
+    --ld-body-size-desktop: {{ hero.body_size_desktop }}px;
+    --ld-body-size-mobile: {{ hero.body_size_mobile }}px;
+    --ld-title-weight: {{ hero.title_weight }};
+    --ld-text-color: {{ hero.text_color }};
+    --ld-script-color: {{ hero.script_color }};
+    --ld-overlay-color: {{ hero.overlay_color }};
+    --ld-overlay-left: {{ hero.overlay_left }}%;
+    --ld-overlay-right: {{ hero.overlay_right }}%;
+    --ld-overlay-mobile-bottom: {{ hero.overlay_mobile_bottom }}%;
+    --ld-overlay-mobile-top: {{ hero.overlay_mobile_top }}%;
+    --ld-image-position-desktop: {{ hero.image_x_desktop }}% {{ hero.image_y_desktop }}%;
+    --ld-image-position-mobile: {{ hero.image_x_mobile }}% {{ hero.image_y_mobile }}%;
+    --ld-button-background: {{ hero.button_background }};
+    --ld-button-color: {{ hero.button_text_color }};
+    --ld-button-radius: {{ hero.button_radius }}px;
+    --ld-button-size: {{ hero.button_font_size }}px;
+    --ld-description-width: {{ hero.description_width }}px;
+    --ld-star-color: {{ hero.star_color }};
+    --ld-star-size: {{ hero.star_size }}px;
+    --ld-rating-fill: {{ rating_fill }}%;
+    --ld-corner-radius: {{ hero.corner_radius }}px;
+  "
+>
+  <div class="ld-hero__media">
+    {% if hero_image != blank %}
+      <picture class="ld-hero__picture">
+        {% if hero.image_mobile != blank %}
+          <source
+            media="(max-width: 749px)"
+            srcset="{{ hero.image_mobile | image_url: width: 750 }} 750w, {{ hero.image_mobile | image_url: width: 1100 }} 1100w"
+            sizes="100vw"
+          >
+        {% endif %}
+        {{
+          hero_image
+          | image_url: width: 2400
+          | image_tag:
+            class: 'ld-hero__image',
+            widths: '375, 550, 750, 1100, 1500, 1800, 2200, 2400',
+            sizes: '100vw',
+            loading: 'eager',
+            fetchpriority: 'high',
+            alt: hero.image_alt
+        }}
+      </picture>
+    {% else %}
+      <div class="ld-hero__placeholder" aria-hidden="true"></div>
+    {% endif %}
+  </div>
+
+  <div class="ld-hero__overlay" aria-hidden="true"></div>
+
+  <div class="ld-hero__inner">
+    <div class="ld-hero__content">
+      {% if hero.eyebrow != blank %}
+        <p class="ld-hero__eyebrow">{{ hero.eyebrow | escape }}</p>
+      {% endif %}
+
+      {% if hero.show_reviews %}
+        <div class="ld-hero__reviews">
+          <span class="ld-hero__stars" aria-hidden="true">★★★★★</span>
+          <span class="ld-hero__rating-text">
+            <strong>{{ hero.rating }}/5</strong>
+            {% if hero.reviews_label != blank %}
+              <span>{{ hero.reviews_label | escape }}</span>
+            {% endif %}
+          </span>
+        </div>
+      {% endif %}
+
+      {% if hero.title_main != blank or hero.title_script != blank %}
+        <{{ hero.heading_tag }} class="ld-hero__title">
+          {% if hero.title_main != blank %}
+            <span class="ld-hero__title-main">{{ hero.title_main | escape }}</span>
+          {% endif %}
+          {% if hero.title_script != blank %}
+            <span class="ld-hero__title-script">{{ hero.title_script | escape }}</span>
+          {% endif %}
+        </{{ hero.heading_tag }}>
+      {% endif %}
+
+      {% if hero.button_label != blank or hero.description != blank %}
+        <div class="ld-hero__actions">
+          {% if hero.button_label != blank %}
+            <a class="ld-hero__button" href="{{ hero_url | escape }}">
+              <span>{{ hero.button_label | escape }}</span>
+              {% if hero.show_button_arrow %}
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M7 17 17 7M8 7h9v9"/>
+                </svg>
+              {% endif %}
+            </a>
+          {% endif %}
+          {% if hero.description != blank %}
+            <p class="ld-hero__description">{{ hero.description | escape | newline_to_br }}</p>
+          {% endif %}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+{% stylesheet %}
+  .ld-hero {
+    position: relative;
+    isolation: isolate;
+    display: flex;
+    align-items: flex-end;
+    min-height: var(--ld-height-desktop);
+    width: 100%;
+    overflow: hidden;
+    border-radius: var(--ld-corner-radius);
+    background: #1D100B;
+    color: var(--ld-text-color);
+    box-sizing: border-box;
+  }
+
+  .ld-hero * { box-sizing: border-box; }
+
+  .ld-hero__media,
+  .ld-hero__overlay,
+  .ld-hero__picture,
+  .ld-hero__placeholder {
+    position: absolute;
+    inset: 0;
+    display: block;
+    height: 100%;
+    width: 100%;
+  }
+
+  .ld-hero__media { z-index: 0; }
+  .ld-hero__overlay {
+    z-index: 1;
+    pointer-events: none;
+    background: linear-gradient(
+      90deg,
+      color-mix(in srgb, var(--ld-overlay-color) var(--ld-overlay-left), transparent),
+      color-mix(in srgb, var(--ld-overlay-color) var(--ld-overlay-right), transparent)
+    );
+  }
+
+  .ld-hero__image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: var(--ld-image-position-desktop);
+  }
+
+  .ld-hero__placeholder {
+    background: linear-gradient(115deg, #1D100B 0%, #54311D 58%, #281611 100%);
+  }
+
+  .ld-hero__inner {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    padding: var(--ld-padding-y-desktop) var(--ld-padding-x-desktop);
+  }
+
+  .ld-hero__content {
+    width: 100%;
+    max-width: var(--ld-content-width);
+  }
+
+  .ld-hero--vertical-top { align-items: flex-start; }
+  .ld-hero--vertical-middle { align-items: center; }
+  .ld-hero--vertical-bottom { align-items: flex-end; }
+
+  .ld-hero--align-center .ld-hero__content { margin: 0 auto; text-align: center; }
+  .ld-hero--align-right .ld-hero__content { margin-left: auto; text-align: right; }
+
+  .ld-hero__eyebrow {
+    margin: 0 0 18px;
+    color: inherit;
+    font: inherit;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+  }
+
+  .ld-hero__reviews {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  .ld-hero__stars {
+    display: inline-block;
+    flex-shrink: 0;
+    font-family: Arial, sans-serif;
+    font-size: var(--ld-star-size);
+    letter-spacing: .08em;
+    line-height: 1;
+    background: linear-gradient(
+      to right,
+      var(--ld-star-color) var(--ld-rating-fill),
+      rgba(255, 255, 255, .35) var(--ld-rating-fill)
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .ld-hero__rating-text {
+    display: inline-flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 6px;
+    font-size: 12px;
+    line-height: 1.3;
+    color: inherit;
+  }
+
+  .ld-hero__rating-text strong { font-weight: 650; }
+
+  .ld-hero__title {
+    margin: 0;
+    color: var(--ld-text-color);
+    font-family: var(--font-heading-family, inherit);
+    font-weight: var(--ld-title-weight);
+  }
+
+  .ld-hero__title-main {
+    display: block;
+    font-size: var(--ld-title-size-desktop);
+    font-weight: inherit;
+    letter-spacing: -.045em;
+    line-height: 1.12;
+    text-wrap: balance;
+  }
+
+  .ld-hero__title-script {
+    display: block;
+    margin-top: 3px;
+    color: var(--ld-script-color);
+    font-family: "Luxurious Script", "Brush Script MT", cursive;
+    font-size: var(--ld-script-size-desktop);
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 1.12;
+    text-transform: none;
+  }
+
+  .ld-hero__actions {
+    display: flex;
+    align-items: center;
+    gap: 26px;
+    margin-top: 32px;
+  }
+
+  .ld-hero__button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-shrink: 0;
+    gap: 22px;
+    min-height: 48px;
+    padding: 14px 20px;
+    border: 1px solid var(--ld-button-background);
+    border-radius: var(--ld-button-radius);
+    background: var(--ld-button-background);
+    color: var(--ld-button-color);
+    font: inherit;
+    font-size: var(--ld-button-size);
+    font-weight: 650;
+    line-height: 1.25;
+    letter-spacing: .12em;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: opacity .2s ease;
+  }
+
+  .ld-hero__button:hover { opacity: .86; }
+  .ld-hero__button svg { flex-shrink: 0; }
+
+  .ld-hero--button-outline .ld-hero__button {
+    background: transparent;
+    color: var(--ld-button-background);
+  }
+
+  .ld-hero__description {
+    width: 100%;
+    max-width: var(--ld-description-width);
+    margin: 0;
+    color: inherit;
+    font: inherit;
+    font-size: var(--ld-body-size-desktop);
+    line-height: 1.55;
+    text-align: left;
+  }
+
+  .ld-hero--actions-stacked .ld-hero__actions {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .ld-hero--actions-stacked.ld-hero--align-center .ld-hero__actions { align-items: center; }
+  .ld-hero--actions-stacked.ld-hero--align-right .ld-hero__actions { align-items: flex-end; }
+
+  .ld-hero--align-center .ld-hero__reviews,
+  .ld-hero--align-center .ld-hero__actions { justify-content: center; }
+
+  .ld-hero--align-right .ld-hero__reviews,
+  .ld-hero--align-right .ld-hero__actions { justify-content: flex-end; }
+
+  .ld-hero--align-center .ld-hero__description { text-align: center; }
+  .ld-hero--align-right .ld-hero__description { text-align: right; }
+
+  @media screen and (max-width: 990px) {
+    .ld-hero__actions { gap: 18px; }
+    .ld-hero__button { gap: 12px; }
+  }
+
+  @media screen and (max-width: 749px) {
+    .ld-hero {
+      min-height: var(--ld-height-mobile);
+      border-radius: var(--ld-corner-radius);
+    }
+
+    .ld-hero__image { object-position: var(--ld-image-position-mobile); }
+
+    .ld-hero__overlay {
+      background: linear-gradient(
+        0deg,
+        color-mix(in srgb, var(--ld-overlay-color) var(--ld-overlay-mobile-bottom), transparent),
+        color-mix(in srgb, var(--ld-overlay-color) var(--ld-overlay-mobile-top), transparent)
+      );
+    }
+
+    .ld-hero__inner {
+      padding: var(--ld-padding-y-mobile) var(--ld-padding-x-mobile);
+    }
+
+    .ld-hero__content { max-width: 100%; }
+    .ld-hero__title-main { font-size: var(--ld-title-size-mobile); line-height: 1.16; }
+    .ld-hero__title-script { font-size: var(--ld-script-size-mobile); line-height: 1.05; margin-top: 7px; }
+    .ld-hero__reviews { gap: 8px; margin-bottom: 15px; }
+    .ld-hero__rating-text { font-size: 11px; }
+    .ld-hero__eyebrow { margin-bottom: 13px; font-size: 10px; }
+    .ld-hero__actions { flex-direction: column; align-items: flex-start; gap: 15px; margin-top: 25px; }
+    .ld-hero__button { min-height: 44px; padding: 13px 17px; }
+    .ld-hero__description { max-width: 100%; font-size: var(--ld-body-size-mobile); line-height: 1.5; }
+
+    .ld-hero--mobile-vertical-top { align-items: flex-start; }
+    .ld-hero--mobile-vertical-middle { align-items: center; }
+    .ld-hero--mobile-vertical-bottom { align-items: flex-end; }
+
+    .ld-hero--mobile-align-left .ld-hero__content { margin-left: 0; margin-right: auto; text-align: left; }
+    .ld-hero--mobile-align-center .ld-hero__content { margin: 0 auto; text-align: center; }
+    .ld-hero--mobile-align-right .ld-hero__content { margin-left: auto; margin-right: 0; text-align: right; }
+    .ld-hero--mobile-align-left .ld-hero__reviews,
+    .ld-hero--mobile-align-left .ld-hero__actions { justify-content: flex-start; }
+    .ld-hero--mobile-align-center .ld-hero__reviews,
+    .ld-hero--mobile-align-center .ld-hero__actions { justify-content: center; }
+    .ld-hero--mobile-align-right .ld-hero__reviews,
+    .ld-hero--mobile-align-right .ld-hero__actions { justify-content: flex-end; }
+
+    .ld-hero--mobile-align-left .ld-hero__description { text-align: left; }
+    .ld-hero--mobile-align-center .ld-hero__description { text-align: center; }
+    .ld-hero--mobile-align-right .ld-hero__description { text-align: right; }
+
+    .ld-hero--mobile-align-center .ld-hero__actions { align-items: center; }
+    .ld-hero--mobile-align-right .ld-hero__actions { align-items: flex-end; }
+    .ld-hero--mobile-align-left .ld-hero__actions { align-items: flex-start; }
+    .ld-hero--button-full-mobile .ld-hero__button { width: 100%; justify-content: center; }
+    .ld-hero--description-first-mobile .ld-hero__description { order: -1; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .ld-hero__button { transition: none; }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Louis Dante Hero",
+  "tag": "section",
+  "class": "louis-dante-hero-section",
+  "settings": [
+    { "type": "header", "content": "Background images" },
+    { "type": "image_picker", "id": "image_desktop", "label": "Desktop image" },
+    { "type": "image_picker", "id": "image_mobile", "label": "Mobile image (optional)" },
+    { "type": "text", "id": "image_alt", "label": "Image alt text", "default": "Luxury watch winder" },
+    { "type": "range", "id": "image_x_desktop", "label": "Desktop image X position", "min": 0, "max": 100, "step": 5, "unit": "%", "default": 70 },
+    { "type": "range", "id": "image_y_desktop", "label": "Desktop image Y position", "min": 0, "max": 100, "step": 5, "unit": "%", "default": 50 },
+    { "type": "range", "id": "image_x_mobile", "label": "Mobile image X position", "min": 0, "max": 100, "step": 5, "unit": "%", "default": 75 },
+    { "type": "range", "id": "image_y_mobile", "label": "Mobile image Y position", "min": 0, "max": 100, "step": 5, "unit": "%", "default": 50 },
+
+    { "type": "header", "content": "Text" },
+    { "type": "text", "id": "eyebrow", "label": "Small label (optional)" },
+    { "type": "text", "id": "title_main", "label": "Main heading", "default": "Your timepiece deserves" },
+    { "type": "text", "id": "title_script", "label": "Script heading", "default": "a place of its own." },
+    { "type": "select", "id": "heading_tag", "label": "Heading HTML tag", "options": [
+      { "value": "h1", "label": "H1" },
+      { "value": "h2", "label": "H2" }
+    ], "default": "h1" },
+    { "type": "textarea", "id": "description", "label": "Description beside the button", "default": "Watch winders for the pieces you treasure. Thoughtful details, considered finishes and a place in your everyday ritual." },
+    { "type": "range", "id": "title_size_desktop", "label": "Main heading size PC", "min": 28, "max": 90, "step": 2, "unit": "px", "default": 54 },
+    { "type": "range", "id": "title_size_mobile", "label": "Main heading size mobile", "min": 22, "max": 54, "step": 1, "unit": "px", "default": 34 },
+    { "type": "range", "id": "script_size_desktop", "label": "Script size PC", "min": 30, "max": 100, "step": 2, "unit": "px", "default": 70 },
+    { "type": "range", "id": "script_size_mobile", "label": "Script size mobile", "min": 28, "max": 80, "step": 1, "unit": "px", "default": 52 },
+    { "type": "range", "id": "body_size_desktop", "label": "Description size PC", "min": 11, "max": 20, "step": 1, "unit": "px", "default": 13 },
+    { "type": "range", "id": "body_size_mobile", "label": "Description size mobile", "min": 11, "max": 18, "step": 1, "unit": "px", "default": 13 },
+    { "type": "range", "id": "title_weight", "label": "Main heading weight", "min": 300, "max": 700, "step": 100, "default": 400 },
+
+    { "type": "header", "content": "Customer reviews" },
+    { "type": "checkbox", "id": "show_reviews", "label": "Show customer stars", "default": true },
+    { "type": "range", "id": "rating", "label": "Star rating (out of 5)", "min": 0, "max": 5, "step": 0.1, "default": 4.8 },
+    { "type": "text", "id": "reviews_label", "label": "Review label", "default": "3,214 customer reviews" },
+    { "type": "range", "id": "star_size", "label": "Star size", "min": 12, "max": 28, "step": 1, "unit": "px", "default": 17 },
+    { "type": "color", "id": "star_color", "label": "Star color", "default": "#E5CC9B" },
+
+    { "type": "header", "content": "Button" },
+    { "type": "text", "id": "button_label", "label": "Button label", "default": "Explore the collection" },
+    { "type": "url", "id": "button_link", "label": "Button link" },
+    { "type": "select", "id": "button_style", "label": "Button style", "options": [
+      { "value": "solid", "label": "Filled" },
+      { "value": "outline", "label": "Outline" }
+    ], "default": "solid" },
+    { "type": "checkbox", "id": "show_button_arrow", "label": "Show button arrow", "default": true },
+    { "type": "checkbox", "id": "button_full_mobile", "label": "Full-width button on mobile", "default": false },
+    { "type": "range", "id": "button_font_size", "label": "Button text size", "min": 10, "max": 16, "step": 1, "unit": "px", "default": 11 },
+    { "type": "range", "id": "button_radius", "label": "Button corner radius", "min": 0, "max": 30, "step": 1, "unit": "px", "default": 0 },
+    { "type": "color", "id": "button_background", "label": "Button background", "default": "#F2EEE9" },
+    { "type": "color", "id": "button_text_color", "label": "Button text", "default": "#1C2A36" },
+
+    { "type": "header", "content": "Layout PC and mobile" },
+    { "type": "range", "id": "height_desktop", "label": "Banner height PC", "min": 400, "max": 1000, "step": 20, "unit": "px", "default": 700 },
+    { "type": "range", "id": "height_mobile", "label": "Banner height mobile", "min": 420, "max": 900, "step": 20, "unit": "px", "default": 700 },
+    { "type": "range", "id": "content_width", "label": "Content max width", "min": 400, "max": 1000, "step": 20, "unit": "px", "default": 800 },
+    { "type": "range", "id": "description_width", "label": "Description max width", "min": 180, "max": 500, "step": 20, "unit": "px", "default": 300 },
+    { "type": "range", "id": "padding_x_desktop", "label": "Horizontal padding PC", "min": 20, "max": 160, "step": 5, "unit": "px", "default": 90 },
+    { "type": "range", "id": "padding_y_desktop", "label": "Vertical padding PC", "min": 20, "max": 140, "step": 5, "unit": "px", "default": 60 },
+    { "type": "range", "id": "padding_x_mobile", "label": "Horizontal padding mobile", "min": 12, "max": 48, "step": 2, "unit": "px", "default": 22 },
+    { "type": "range", "id": "padding_y_mobile", "label": "Vertical padding mobile", "min": 12, "max": 90, "step": 2, "unit": "px", "default": 36 },
+    { "type": "select", "id": "align_desktop", "label": "Text alignment PC", "options": [
+      { "value": "left", "label": "Left" },
+      { "value": "center", "label": "Center" },
+      { "value": "right", "label": "Right" }
+    ], "default": "left" },
+    { "type": "select", "id": "align_mobile", "label": "Text alignment mobile", "options": [
+      { "value": "left", "label": "Left" },
+      { "value": "center", "label": "Center" },
+      { "value": "right", "label": "Right" }
+    ], "default": "left" },
+    { "type": "select", "id": "vertical_desktop", "label": "Vertical alignment PC", "options": [
+      { "value": "top", "label": "Top" },
+      { "value": "middle", "label": "Middle" },
+      { "value": "bottom", "label": "Bottom" }
+    ], "default": "bottom" },
+    { "type": "select", "id": "vertical_mobile", "label": "Vertical alignment mobile", "options": [
+      { "value": "top", "label": "Top" },
+      { "value": "middle", "label": "Middle" },
+      { "value": "bottom", "label": "Bottom" }
+    ], "default": "bottom" },
+    { "type": "checkbox", "id": "actions_stacked", "label": "Stack button and text on PC", "default": false },
+    { "type": "checkbox", "id": "description_first_mobile", "label": "Description before button on mobile", "default": false },
+    { "type": "range", "id": "corner_radius", "label": "Banner corner radius", "min": 0, "max": 24, "step": 2, "unit": "px", "default": 0 },
+
+    { "type": "header", "content": "Colors and overlay" },
+    { "type": "color", "id": "text_color", "label": "Main text color", "default": "#FFFFFF" },
+    { "type": "color", "id": "script_color", "label": "Script text color", "default": "#FFFFFF" },
+    { "type": "color", "id": "overlay_color", "label": "Overlay tint", "default": "#090707" },
+    { "type": "range", "id": "overlay_left", "label": "Desktop darkness left", "min": 0, "max": 100, "step": 5, "unit": "%", "default": 85 },
+    { "type": "range", "id": "overlay_right", "label": "Desktop darkness right", "min": 0, "max": 100, "step": 5, "unit": "%", "default": 20 },
+    { "type": "range", "id": "overlay_mobile_bottom", "label": "Mobile darkness bottom", "min": 0, "max": 100, "step": 5, "unit": "%", "default": 85 },
+    { "type": "range", "id": "overlay_mobile_top", "label": "Mobile darkness top", "min": 0, "max": 100, "step": 5, "unit": "%", "default": 10 }
+  ],
+  "presets": [
+    { "name": "Louis Dante Hero" }
+  ]
+}
+{% endschema %}
