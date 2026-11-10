@@ -9,6 +9,78 @@
  */
 {
   "sections": {
+    "logoscroll_wMPRUj": {
+      "type": "logoscroll",
+      "blocks": {
+        "image_Kh9mBW": {
+          "type": "image",
+          "settings": {
+            "url": ""
+          }
+        },
+        "image_NbMJmR": {
+          "type": "image",
+          "settings": {
+            "url": ""
+          }
+        },
+        "image_bJh34r": {
+          "type": "image",
+          "settings": {
+            "url": ""
+          }
+        },
+        "image_aah7DB": {
+          "type": "image",
+          "settings": {
+            "url": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_Kh9mBW",
+        "image_NbMJmR",
+        "image_bJh34r",
+        "image_aah7DB"
+      ],
+      "name": "SS - Scrolling logo cloud #5",
+      "settings": {
+        "layout_radius": 30,
+        "layout_border_thickness": 0,
+        "heading": "",
+        "heading_custom": false,
+        "heading_font": "josefin_sans_n4",
+        "heading_size": 18,
+        "heading_size_mobile": 18,
+        "heading_height": 130,
+        "scrolling_velocity": 22,
+        "scrolling_velocity_mobile": 18,
+        "scrolling_direction": "left",
+        "pause_hover": false,
+        "scrolling_gap": 70,
+        "scrolling_gap_mobile": 30,
+        "card_width_desktop": 130,
+        "card_width_mobile": 100,
+        "heading_color": "#121212",
+        "layout_bg_color": "#FFFFFF",
+        "layout_border_color": "#121212",
+        "background_color": "#FFFFFF",
+        "border_color": "#121212",
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "margin_horizontal": 0,
+        "margin_horizontal_mobile": 0,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_horizontal": 5,
+        "padding_horizontal_mobile": 0,
+        "full_width": false,
+        "content_width": 1200,
+        "border_thickness": 0,
+        "section_radius": 0,
+        "lazy": true
+      }
+    },
     "collectionbestseller_TyJxDT": {
       "type": "collectionbestseller",
       "blocks": {
@@ -163,12 +235,12 @@
         "heading_before": "Three collections, one standard for your",
         "heading_script": "timepieces.",
         "description": "Watch winders, watch boxes and travel cases — a home for every timepiece, wherever life takes you.",
-        "background_color": "#FAF9F7",
-        "text_color": "#1B2632",
-        "muted_color": "#767C83",
-        "card_text_color": "#FFFFFF",
-        "button_background": "#FFFFFF",
-        "button_text_color": "#1B2632",
+        "background_color": "#faf9f7",
+        "text_color": "#1b2632",
+        "muted_color": "#767c83",
+        "card_text_color": "#ffffff",
+        "button_background": "#ffffff",
+        "button_text_color": "#1b2632",
         "image_overlay": 40,
         "max_width": 2200,
         "card_gap": 8,
@@ -423,6 +495,7 @@
     }
   },
   "order": [
+    "logoscroll_wMPRUj",
     "collectionbestseller_TyJxDT",
     "louisdantecollection_7M7AyM",
     "louisdentereviews_kj7HtW",
