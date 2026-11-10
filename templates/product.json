@@ -24,10 +24,6 @@
             "heading_tag": "h3"
           }
         },
-        "badges": {
-          "type": "badges",
-          "settings": {}
-        },
         "price": {
           "type": "price",
           "settings": {
@@ -38,6 +34,12 @@
           "type": "liquid",
           "settings": {
             "liquid": "<div class=\"ld-trust-badges\" role=\"list\" aria-label=\"Our benefits\">\n\n  <div class=\"ld-trust-badges__badge\" role=\"listitem\">\n    <svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"\n      fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\"\n      stroke-linecap=\"round\" stroke-linejoin=\"round\">\n      <path d=\"M2.5 5.5h12v11h-12z\"></path>\n      <path d=\"M14.5 9h4l3 4v3.5h-7\"></path>\n      <circle cx=\"7\" cy=\"17.5\" r=\"1.8\"></circle>\n      <circle cx=\"18\" cy=\"17.5\" r=\"1.8\"></circle>\n    </svg>\n    <span>Free Shipping</span>\n  </div>\n\n  <div class=\"ld-trust-badges__badge\" role=\"listitem\">\n    <svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"\n      fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\"\n      stroke-linecap=\"round\" stroke-linejoin=\"round\">\n      <path d=\"M3 11a9 9 0 1 1 2.5 6.2\"></path>\n      <path d=\"M3 4v7h7\"></path>\n      <path d=\"M12 7v5l3 2\"></path>\n    </svg>\n    <span>30-Day Returns</span>\n  </div>\n\n  <div class=\"ld-trust-badges__badge\" role=\"listitem\">\n    <svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"\n      fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\"\n      stroke-linecap=\"round\" stroke-linejoin=\"round\">\n      <path d=\"M12 2.5 4.5 5.5v6.2c0 4.8 3.1 8.2 7.5 10 4.4-1.8 7.5-5.2 7.5-10V5.5z\"></path>\n      <path d=\"m9 12 2.1 2.1 4.2-4.3\"></path>\n    </svg>\n    <span>2-Year Warranty</span>\n  </div>\n\n</div>\n\n<style>\n  .ld-trust-badges {\n    display: flex;\n    align-items: center;\n    gap: 7px;\n    width: max-content;\n    max-width: 100%;\n    font-family: var(--font-body-family, inherit);\n  }\n\n  .ld-trust-badges__badge {\n    display: inline-flex;\n    flex: 0 0 auto;\n    align-items: center;\n    justify-content: center;\n    gap: 6px;\n    min-height: 32px;\n    padding: 7px 10px;\n    border-radius: 5px;\n    background-color: #f2eee9;\n    color: #1c2a36;\n    font-family: inherit;\n    font-size: 13px;\n    font-weight: 500;\n    line-height: 1.2;\n    white-space: nowrap;\n    box-sizing: border-box;\n  }\n\n  .ld-trust-badges__badge svg {\n    display: block;\n    flex: 0 0 auto;\n    width: 16px;\n    height: 16px;\n  }\n\n  @media (max-width: 600px) {\n    .ld-trust-badges {\n      display: grid;\n      grid-template-columns: repeat(3, minmax(0, 1fr));\n      gap: 4px;\n      width: 100%;\n    }\n\n    .ld-trust-badges__badge {\n      min-width: 0;\n      min-height: 28px;\n      gap: 3px;\n      padding: 5px 3px;\n      font-size: clamp(8px, 2.65vw, 10.5px);\n      letter-spacing: -0.01em;\n      border-radius: 4px;\n    }\n\n    .ld-trust-badges__badge svg {\n      width: 12px;\n      height: 12px;\n    }\n  }\n</style>"
+          }
+        },
+        "liquid_F7rxka": {
+          "type": "liquid",
+          "settings": {
+            "liquid": "<ul class=\"ld-winder-benefits\" aria-label=\"Watch winder benefits\">\n\n  <li class=\"ld-winder-benefits__item\">\n    <span class=\"ld-winder-benefits__check\" aria-hidden=\"true\">✓</span>\n    <span class=\"ld-winder-benefits__text\">\n      <strong>A collector’s standard:</strong>\n      your automatic watch is always ready to wear.\n    </span>\n  </li>\n\n  <li class=\"ld-winder-benefits__item\">\n    <span class=\"ld-winder-benefits__check\" aria-hidden=\"true\">✓</span>\n    <span class=\"ld-winder-benefits__text\">\n      <strong>A connoisseur’s peace of mind:</strong>\n      your watch stays wound while you sleep.\n    </span>\n  </li>\n\n  <li class=\"ld-winder-benefits__item\">\n    <span class=\"ld-winder-benefits__check\" aria-hidden=\"true\">✓</span>\n    <span class=\"ld-winder-benefits__text\">\n      <strong>A watchmaker’s precision:</strong>\n      gentle rotations balanced with rest periods.\n    </span>\n  </li>\n\n</ul>\n\n<style>\n\n  .ld-winder-benefits {\n    display: grid;\n    gap: 10px;\n    width: 100%;\n    margin: 10px 0;\n    padding: 0;\n    list-style: none;\n    font-family: inherit;\n  }\n\n  .ld-winder-benefits__item {\n    display: grid;\n    grid-template-columns: 20px minmax(0, 1fr);\n    align-items: start;\n    gap: 10px;\n    margin: 0;\n    padding: 0;\n  }\n\n  .ld-winder-benefits__check {\n    color: #1C2A36;\n    font-family: Arial, sans-serif;\n    font-size: 19px;\n    font-weight: 300;\n    line-height: 1.2;\n    text-align: center;\n  }\n\n  .ld-winder-benefits__text {\n    color: #59616A;\n    font-size: 16px;\n    font-weight: 400;\n    line-height: 1.35;\n    letter-spacing: -0.15px;\n  }\n\n  .ld-winder-benefits__text strong {\n    color: #1C2A36;\n    font-weight: 600;\n  }\n\n  @media screen and (max-width: 749px) {\n\n    .ld-winder-benefits {\n      gap: 9px;\n      margin: 8px 0;\n    }\n\n    .ld-winder-benefits__item {\n      grid-template-columns: 17px minmax(0, 1fr);\n      gap: 7px;\n    }\n\n    .ld-winder-benefits__check {\n      font-size: 16px;\n      line-height: 1.35;\n    }\n\n    .ld-winder-benefits__text {\n      font-size: 13px;\n      line-height: 1.4;\n      letter-spacing: 0;\n    }\n\n  }\n\n</style>"
           }
         },
         "separator": {
@@ -116,9 +118,9 @@
       "block_order": [
         "liquid_JCUVRD",
         "title",
-        "badges",
         "price",
         "liquid_R7GEFc",
+        "liquid_F7rxka",
         "separator",
         "description",
         "variant_picker",
