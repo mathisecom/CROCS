@@ -285,11 +285,11 @@
         "mobile_overlap": 50,
         "padding_top": 40,
         "padding_bottom": 90,
-        "background_color": "#FFFFFF",
-        "card_background": "#F1F1F1",
-        "title_color": "#1C2A36",
-        "text_color": "#3D4348",
-        "icon_color": "#CDB9A5"
+        "background_color": "#ffffff",
+        "card_background": "#f1f1f1",
+        "title_color": "#1c2a36",
+        "text_color": "#3d4348",
+        "icon_color": "#cdb9a5"
       }
     },
     "imagewithtext_QbWMfe": {
@@ -337,11 +337,11 @@
         "mobile_overlap": 50,
         "padding_top": 30,
         "padding_bottom": 90,
-        "background_color": "#FFFFFF",
-        "card_background": "#F1F1F1",
-        "title_color": "#1C2A36",
-        "text_color": "#3D4348",
-        "icon_color": "#CDB9A5"
+        "background_color": "#ffffff",
+        "card_background": "#f1f1f1",
+        "title_color": "#1c2a36",
+        "text_color": "#3d4348",
+        "icon_color": "#cdb9a5"
       }
     },
     "louisdentereviews_wYiRjQ": {
@@ -401,41 +401,74 @@
     "collectionbestseller_gKcV6w": {
       "type": "collectionbestseller",
       "blocks": {
+        "product_card_iPXtjN": {
+          "type": "product_card",
+          "settings": {
+            "product": "electric-shaker-watch-storage-box",
+            "title": "",
+            "subtitle": "",
+            "price_text": "",
+            "link": ""
+          }
+        },
+        "product_card_6WqMtU": {
+          "type": "product_card",
+          "settings": {
+            "product": "leather-automatic-watch-winder-mechanical-watch-household",
+            "title": "",
+            "subtitle": "",
+            "price_text": "",
+            "link": ""
+          }
+        },
+        "product_card_KdDtWy": {
+          "type": "product_card",
+          "settings": {
+            "product": "carbon-fiber-pattern-single-watch-winder-for-automatic-mechanical-watches",
+            "title": "",
+            "subtitle": "",
+            "price_text": "",
+            "link": ""
+          }
+        },
+        "product_card_bK93Yk": {
+          "type": "product_card",
+          "settings": {
+            "product": "shaking-watch-automatic-mechanical-receiving-table-watch-roll-case",
+            "title": "",
+            "subtitle": "",
+            "price_text": "",
+            "link": ""
+          }
+        },
         "product_card_Lz7mQE": {
           "type": "product_card",
           "settings": {
-            "product": "",
-            "title": "OPERA WATCH BOX",
-            "subtitle": "6 watches",
-            "price_text": "From €134.99",
+            "product": "motor-box-electric-up-chain-turntable-to-store-the-watch-box",
+            "title": "",
+            "subtitle": "",
+            "price_text": "",
             "link": ""
           }
         },
-        "product_card_BfxAxq": {
+        "product_card_PbV6Ga": {
           "type": "product_card",
           "settings": {
-            "product": "",
-            "title": "CASSIOPEIA WATCH WINDER",
-            "subtitle": "4 watches",
-            "price_text": "From €264.99",
-            "link": ""
-          }
-        },
-        "product_card_4KLYTF": {
-          "type": "product_card",
-          "settings": {
-            "product": "",
-            "title": "TRAVEL WATCH CASE",
-            "subtitle": "4 watches",
-            "price_text": "From €54.99",
+            "product": "black-walnut-single-meter-vertical-automatic-mechanical-watch-shaker",
+            "title": "",
+            "subtitle": "",
+            "price_text": "",
             "link": ""
           }
         }
       },
       "block_order": [
+        "product_card_iPXtjN",
+        "product_card_6WqMtU",
+        "product_card_KdDtWy",
+        "product_card_bK93Yk",
         "product_card_Lz7mQE",
-        "product_card_BfxAxq",
-        "product_card_4KLYTF"
+        "product_card_PbV6Ga"
       ],
       "name": "Favoris clients - Slider",
       "settings": {
@@ -445,8 +478,8 @@
         "view_all_label": "",
         "view_all_url": "",
         "promo_image": "shopify://shop_images/23aac5c3-6588-4b3a-9374-5e7e032e4985.png",
-        "promo_title": "Discover the entire",
-        "promo_script": "collection",
+        "promo_title": "",
+        "promo_script": "",
         "promo_cta": "",
         "promo_url": "",
         "promo_button_style": "filled",
@@ -459,7 +492,7 @@
         "promo_text_color": "#ffffff",
         "show_prices": true,
         "price_prefix": "From",
-        "product_ratio": "0.8",
+        "product_ratio": "1",
         "background_color": "#ffffff",
         "heading_color": "#192534",
         "text_color": "#6e7681",
